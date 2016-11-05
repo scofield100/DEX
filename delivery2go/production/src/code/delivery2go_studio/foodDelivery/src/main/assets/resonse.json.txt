@@ -1,0 +1,344 @@
+{
+   "results" : [
+      {
+         "address_components" : [
+            {
+               "long_name" : "Long Beach",
+               "short_name" : "Long Beach",
+               "types" : [ "locality", "political" ]
+            },
+            {
+               "long_name" : "Condado de Los Angeles",
+               "short_name" : "Condado de Los Angeles",
+               "types" : [ "administrative_area_level_2", "political" ]
+            },
+            {
+               "long_name" : "California",
+               "short_name" : "CA",
+               "types" : [ "administrative_area_level_1", "political" ]
+            },
+            {
+               "long_name" : "Estados Unidos",
+               "short_name" : "US",
+               "types" : [ "country", "political" ]
+            }
+         ],
+         "formatted_address" : "Long Beach, California, EE. UU.",
+         "geometry" : {
+            "bounds" : {
+               "northeast" : {
+                  "lat" : 33.8854591,
+                  "lng" : -118.063253
+               },
+               "southwest" : {
+                  "lat" : 33.7144693,
+                  "lng" : -118.248966
+               }
+            },
+            "location" : {
+               "lat" : 33.7700504,
+               "lng" : -118.1937395
+            },
+            "location_type" : "APPROXIMATE",
+            "viewport" : {
+               "northeast" : {
+                  "lat" : 33.8854591,
+                  "lng" : -118.063253
+               },
+               "southwest" : {
+                  "lat" : 33.7144693,
+                  "lng" : -118.248966
+               }
+            }
+         },
+         "place_id" : "ChIJWdeZQOjKwoARqo8qxPo6AKE",
+         "types" : [ "locality", "political" ]
+      },
+      {
+         "address_components" : [
+            {
+               "long_name" : "Long Beach",
+               "short_name" : "Long Beach",
+               "types" : [ "locality", "political" ]
+            },
+            {
+               "long_name" : "Condado de Nassau",
+               "short_name" : "Condado de Nassau",
+               "types" : [ "administrative_area_level_2", "political" ]
+            },
+            {
+               "long_name" : "Nueva York",
+               "short_name" : "NY",
+               "types" : [ "administrative_area_level_1", "political" ]
+            },
+            {
+               "long_name" : "Estados Unidos",
+               "short_name" : "US",
+               "types" : [ "country", "political" ]
+            }
+         ],
+         "formatted_address" : "Long Beach, Nueva York, EE. UU.",
+         "geometry" : {
+            "bounds" : {
+               "northeast" : {
+                  "lat" : 40.59514069999999,
+                  "lng" : -73.63739919999999
+               },
+               "southwest" : {
+                  "lat" : 40.5823985,
+                  "lng" : -73.7011423
+               }
+            },
+            "location" : {
+               "lat" : 40.5884373,
+               "lng" : -73.65790799999999
+            },
+            "location_type" : "APPROXIMATE",
+            "viewport" : {
+               "northeast" : {
+                  "lat" : 40.59514069999999,
+                  "lng" : -73.63739919999999
+               },
+               "southwest" : {
+                  "lat" : 40.5823985,
+                  "lng" : -73.7011423
+               }
+            }
+         },
+         "place_id" : "ChIJyYQBQ_ZvwokRY5A746Ftk9M",
+         "types" : [ "locality", "political" ]
+      },
+      {
+         "address_components" : [
+            {
+               "long_name" : "Long Beach",
+               "short_name" : "Long Beach",
+               "types" : [ "locality", "political" ]
+            },
+            {
+               "long_name" : "Condado de Pacific",
+               "short_name" : "Condado de Pacific",
+               "types" : [ "administrative_area_level_2", "political" ]
+            },
+            {
+               "long_name" : "Washington",
+               "short_name" : "WA",
+               "types" : [ "administrative_area_level_1", "political" ]
+            },
+            {
+               "long_name" : "Estados Unidos",
+               "short_name" : "US",
+               "types" : [ "country", "political" ]
+            },
+            {
+               "long_name" : "98631",
+               "short_name" : "98631",
+               "types" : [ "postal_code" ]
+            }
+         ],
+         "formatted_address" : "Long Beach, Washington 98631, EE. UU.",
+         "geometry" : {
+            "bounds" : {
+               "northeast" : {
+                  "lat" : 46.3731801,
+                  "lng" : -124.0477885
+               },
+               "southwest" : {
+                  "lat" : 46.3388769,
+                  "lng" : -124.0632391
+               }
+            },
+            "location" : {
+               "lat" : 46.3523219,
+               "lng" : -124.0543234
+            },
+            "location_type" : "APPROXIMATE",
+            "viewport" : {
+               "northeast" : {
+                  "lat" : 46.3731801,
+                  "lng" : -124.0477885
+               },
+               "southwest" : {
+                  "lat" : 46.3388769,
+                  "lng" : -124.0632391
+               }
+            }
+         },
+         "place_id" : "ChIJydZQJUENk1QRAGmoTfBv0Ag",
+         "types" : [ "locality", "political" ]
+      },
+      {
+         "address_components" : [
+            {
+               "long_name" : "Long Beach",
+               "short_name" : "Long Beach",
+               "types" : [ "locality", "political" ]
+            },
+            {
+               "long_name" : "Condado de Harrison",
+               "short_name" : "Condado de Harrison",
+               "types" : [ "administrative_area_level_2", "political" ]
+            },
+            {
+               "long_name" : "Misisipi",
+               "short_name" : "MS",
+               "types" : [ "administrative_area_level_1", "political" ]
+            },
+            {
+               "long_name" : "Estados Unidos",
+               "short_name" : "US",
+               "types" : [ "country", "political" ]
+            },
+            {
+               "long_name" : "39560",
+               "short_name" : "39560",
+               "types" : [ "postal_code" ]
+            }
+         ],
+         "formatted_address" : "Long Beach, Misisipi 39560, EE. UU.",
+         "geometry" : {
+            "bounds" : {
+               "northeast" : {
+                  "lat" : 30.383784,
+                  "lng" : -89.1245952
+               },
+               "southwest" : {
+                  "lat" : 30.331253,
+                  "lng" : -89.2039159
+               }
+            },
+            "location" : {
+               "lat" : 30.35047509999999,
+               "lng" : -89.15281759999999
+            },
+            "location_type" : "APPROXIMATE",
+            "viewport" : {
+               "northeast" : {
+                  "lat" : 30.383784,
+                  "lng" : -89.1245952
+               },
+               "southwest" : {
+                  "lat" : 30.331253,
+                  "lng" : -89.2039159
+               }
+            }
+         },
+         "place_id" : "ChIJy4OBu6E8nIgRYHcd9RbVDh8",
+         "types" : [ "locality", "political" ]
+      },
+      {
+         "address_components" : [
+            {
+               "long_name" : "Long Beach",
+               "short_name" : "Long Beach",
+               "types" : [ "locality", "political" ]
+            },
+            {
+               "long_name" : "Municipio de Michigan",
+               "short_name" : "Municipio de Michigan",
+               "types" : [ "administrative_area_level_3", "political" ]
+            },
+            {
+               "long_name" : "Condado de LaPorte",
+               "short_name" : "Condado de LaPorte",
+               "types" : [ "administrative_area_level_2", "political" ]
+            },
+            {
+               "long_name" : "Indiana",
+               "short_name" : "IN",
+               "types" : [ "administrative_area_level_1", "political" ]
+            },
+            {
+               "long_name" : "Estados Unidos",
+               "short_name" : "US",
+               "types" : [ "country", "political" ]
+            }
+         ],
+         "formatted_address" : "Long Beach, Indiana, EE. UU.",
+         "geometry" : {
+            "bounds" : {
+               "northeast" : {
+                  "lat" : 41.7603549,
+                  "lng" : -86.825087
+               },
+               "southwest" : {
+                  "lat" : 41.7334329,
+                  "lng" : -86.875429
+               }
+            },
+            "location" : {
+               "lat" : 41.7389287,
+               "lng" : -86.85697359999999
+            },
+            "location_type" : "APPROXIMATE",
+            "viewport" : {
+               "northeast" : {
+                  "lat" : 41.7603549,
+                  "lng" : -86.825087
+               },
+               "southwest" : {
+                  "lat" : 41.7334329,
+                  "lng" : -86.875429
+               }
+            }
+         },
+         "place_id" : "ChIJidQfgTYGEYgROUGxGdO5Zg8",
+         "types" : [ "locality", "political" ]
+      },
+      {
+         "address_components" : [
+            {
+               "long_name" : "Long Beach",
+               "short_name" : "Long Beach",
+               "types" : [ "locality", "political" ]
+            },
+            {
+               "long_name" : "Condado de Ocean",
+               "short_name" : "Condado de Ocean",
+               "types" : [ "administrative_area_level_2", "political" ]
+            },
+            {
+               "long_name" : "Nueva Jersey",
+               "short_name" : "NJ",
+               "types" : [ "administrative_area_level_1", "political" ]
+            },
+            {
+               "long_name" : "Estados Unidos",
+               "short_name" : "US",
+               "types" : [ "country", "political" ]
+            }
+         ],
+         "formatted_address" : "Long Beach, Nueva Jersey, EE. UU.",
+         "geometry" : {
+            "bounds" : {
+               "northeast" : {
+                  "lat" : 39.7721188,
+                  "lng" : -74.11161799999999
+               },
+               "southwest" : {
+                  "lat" : 39.5085104,
+                  "lng" : -74.29217489999999
+               }
+            },
+            "location" : {
+               "lat" : 39.6155009,
+               "lng" : -74.199545
+            },
+            "location_type" : "APPROXIMATE",
+            "viewport" : {
+               "northeast" : {
+                  "lat" : 39.6399173,
+                  "lng" : -74.1837936
+               },
+               "southwest" : {
+                  "lat" : 39.5696903,
+                  "lng" : -74.2416116
+               }
+            }
+         },
+         "place_id" : "ChIJx2xnIu-pwYkRmfIjTP2BiZs",
+         "types" : [ "locality", "political" ]
+      }
+   ],
+   "status" : "OK"
+}

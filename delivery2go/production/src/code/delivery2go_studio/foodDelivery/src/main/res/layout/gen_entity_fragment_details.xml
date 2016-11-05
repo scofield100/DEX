@@ -1,0 +1,366 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+        xmlns:android="http://schemas.android.com/apk/res/android"
+		android:layout_width="match_parent"
+		android:layout_height="match_parent" >
+
+		<LinearLayout
+			android:layout_width="match_parent"
+			android:layout_height="match_parent"
+			android:orientation="vertical"
+			android:paddingLeft="@dimen/activity_horizontal_margin"
+			android:paddingRight="@dimen/activity_horizontal_margin"
+			android:paddingTop="@dimen/activity_vertical_margin"
+			android:paddingBottom="@dimen/activity_vertical_margin"
+			android:tag="{Value:Item}" >
+
+			<RelativeLayout
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content" >
+
+				<ImageView
+					android:id="@+id/imageView1"
+					android:layout_width="@dimen/adapter_image"
+					android:layout_height="@dimen/adapter_image"
+					android:tag="{Value:ImageId, Converter:ImageConverter}"  />
+
+				<LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+					android:layout_toRightOf="@+id/imageView1"
+					android:layout_alignParentTop="true"
+					android:layout_marginLeft="5dp"
+					android:orientation="vertical">
+					<TextView
+						android:id="@+id/textView1"
+						android:layout_width="match_parent"
+						android:layout_height="wrap_content"
+						android:textAppearance="?android:attr/textAppearanceLarge"
+						android:tag="{Value:Name}" />
+
+					<TextView
+						android:id="@+id/textView2"
+						android:layout_width="match_parent"
+						android:layout_height="wrap_content"
+						android:tag="{Value:FullAdress}" />
+
+					<LinearLayout
+						android:layout_width="match_parent"
+						android:layout_height="wrap_content"
+						android:layout_marginTop="@dimen/content_margin_top" >
+
+						<!-- Rating -->
+						<LinearLayout
+							android:id="@+id/ratingBar1"
+							android:layout_width="wrap_content"
+							android:layout_height="wrap_content"
+							android:orientation="horizontal"
+							android:tag="{Value:Ranking, ItemTemplate:adapter_rating, Converter:RankingConverter}"
+							/>
+
+						<!-- ReviewCount -->
+						<TextView
+							android:layout_width="wrap_content"
+							android:layout_height="wrap_content"
+							android:layout_marginLeft="@dimen/content_margin_left"
+							android:text="#Review"
+							android:tag="{Value:ReviewCountString}"
+							android:textAppearance="?android:attr/textAppearanceSmall"
+							android:textColor="@color/text_secondary" />
+					</LinearLayout>
+
+				</LinearLayout>
+
+			</RelativeLayout>
+
+			<LinearLayout
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:layout_marginTop="@dimen/content_margin_top" >
+
+				<TextView
+					android:id="@+id/textView3"
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:text="Keywords: "
+					style="@style/content_label" />
+
+				<TextView
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:tag="{Value:Tags}"
+					style="@style/content_text" />
+
+			</LinearLayout>
+
+			<LinearLayout
+				android:id="@+id/RelativeLayout1"
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:orientation="horizontal"
+				android:layout_marginTop="10dp" >
+
+				<TextView
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:text="Delivery"
+					android:textAppearance="?android:attr/textAppearanceSmall"
+					style="@style/content_label"/>
+
+				<TextView
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:layout_marginLeft="3dp"
+					android:tag="{Value:DeliveryPrice, Converter:CurrencyConverter}"
+					android:text="$3.50"
+					android:textAppearance="?android:attr/textAppearanceSmall"
+					style="@style/content_text" />
+
+				<TextView
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:layout_marginLeft="3dp"
+					android:tag="{Value:DeliveryTime}"
+					android:text="(35-45 min)"
+					android:textAppearance="?android:attr/textAppearanceSmall"
+					style="@style/content_text" />
+
+			</LinearLayout>
+
+			<LinearLayout
+				style="@style/content_panel"
+				android:layout_marginTop="10dp"  >
+				<TextView
+					style="@style/content_label"
+					android:text="@string/lb_minprice" />
+
+				<TextView
+					android:id="@+id/minprice"
+					android:tag="{Value:MinPrice, Converter:CurrencyConverter}"
+					style="@style/content_text"
+					/>
+
+			</LinearLayout>
+
+	<LinearLayout
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:orientation="vertical"
+		android:padding="10dp"
+		android:layout_marginTop="@dimen/content_margin_top"
+		android:background="@drawable/white_round_rect">
+		<TextView
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:text="Contact Info"
+			android:textColor="@color/text_secondary"/>
+
+
+				<TextView
+					android:id="@+id/phone"
+					android:tag="{Value:Phone, ClickCommand:Call}"
+					style="@style/content_text"
+					android:gravity="center"
+					android:drawableRight="@drawable/ic_action_phone_outgoing" />
+
+
+				<TextView
+					android:id="@+id/email"
+					android:gravity="center"
+					android:drawableRight="@drawable/ic_action_mail"
+					android:tag="{Value:Email, ClickCommand:SendEmail}"
+					style="@style/content_text"
+					/>
+
+		</LinearLayout>
+
+
+
+	<LinearLayout
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:orientation="vertical"
+		android:padding="10dp"
+		android:layout_marginTop="@dimen/content_margin_top"
+		android:background="@drawable/white_round_rect">
+		<TextView
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:text="Disponibility Info"
+			android:textColor="@color/text_secondary"/>
+
+            <!-- OpeningTime -->
+
+            <LinearLayout
+                android:layout_marginTop="@dimen/content_margin_top"
+                style="@style/content_panel"
+                android:gravity="center_vertical">
+                <TextView
+                    style="@style/content_label"
+                    android:text="@string/lb_openingtime" />
+
+                <TextView
+                    android:id="@+id/openingtime"
+                    android:tag="{Value:OpeningTime, Converter:TimeConverter}"
+                    style="@style/content_text"
+                    android:gravity="center_vertical"
+                    android:drawableRight="@drawable/ic_action_clock" />
+
+            </LinearLayout>
+
+            <!-- CloseTime -->
+
+            <LinearLayout
+                android:layout_marginTop="@dimen/content_margin_top"
+                style="@style/content_panel"
+                android:gravity="center_vertical">
+                <TextView
+                    style="@style/content_label"
+                    android:text="@string/lb_closetime" />
+
+                <TextView
+                    android:id="@+id/closetime"
+                    android:tag="{Value:CloseTime, Converter:TimeConverter}"
+                    style="@style/content_text"
+                    android:gravity="center_vertical"
+                    android:drawableRight="@drawable/ic_action_clock"
+                    />
+
+            </LinearLayout>
+
+			<CheckBox
+				android:id="@+id/isavailable"
+				style="@style/content_checkbox"
+				android:clickable="false"
+				android:text="@string/isavailable"
+				android:tag="{Value:IsAvailable}" />
+
+			<CheckBox
+				android:id="@+id/hasdelivery"
+				style="@style/content_checkbox"
+				android:clickable="false"
+				android:text="@string/hasdelivery"
+				android:tag="{Value:HasDelivery}" />
+
+
+			<CheckBox
+				android:id="@+id/haspickup"
+				style="@style/content_checkbox"
+				android:clickable="false"
+				android:text="@string/haspickup"
+				android:tag="{Value:HasPickup}" />
+
+		</LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="10dp"
+                android:layout_marginTop="@dimen/content_margin_top"
+                android:background="@drawable/white_round_rect">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Map Location"
+                    android:textColor="@color/text_secondary"/>
+
+                <TextView
+                    android:id="@+id/lng"
+                    android:drawableRight="@drawable/ic_action_location"
+                    android:tag="{Value:LocationText}"
+                    style="@style/content_text"
+                    android:gravity="center"
+                    />
+
+            </LinearLayout>
+
+        <!-- Account -->
+
+            <!--<LinearLayout-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:orientation="vertical"-->
+                <!--android:padding="10dp"-->
+                <!--android:layout_marginTop="@dimen/content_margin_top"-->
+                <!--android:background="@drawable/white_round_rect">-->
+                <!--<TextView-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:text="Paypal account"-->
+                    <!--android:textColor="@color/text_secondary"/>-->
+
+            <!--<TextView-->
+                <!--android:id="@+id/account"-->
+                <!--android:tag="{Value:Account}"-->
+                <!--style="@style/content_text"-->
+                <!--/>-->
+
+        <!--</LinearLayout>-->
+
+            <TextView
+                android:layout_marginTop="@dimen/content_margin_top"
+                android:id="@+id/description"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/custom_edit_text"
+                android:tag="{Value:Description}"
+                />
+
+			<View
+				android:layout_marginTop="@dimen/content_margin_top"
+				android:layout_width="match_parent"
+				android:layout_height="2dp"
+				android:background="@color/ActionBarTabColor" />
+            <!-- CreateDate -->
+
+            <LinearLayout
+                android:layout_marginTop="@dimen/content_margin_top"
+                style="@style/content_panel"  >
+                <TextView
+                    style="@style/content_label"
+                    android:text="@string/lb_createdate" />
+
+                <TextView
+                    android:id="@+id/createdate"
+                    android:tag="{Value:CreateDate, Converter:DateConverter}"
+                    style="@style/content_text"
+                    />
+
+            </LinearLayout>
+
+            <!-- UpdateDate -->
+
+            <LinearLayout
+                android:layout_marginTop="@dimen/content_margin_top"
+                style="@style/content_panel"  >
+                <TextView
+                    style="@style/content_label"
+                    android:text="@string/lb_updatedate" />
+
+                <TextView
+                    android:id="@+id/updatedate"
+                    android:tag="{Value:UpdateDate, Converter:DateConverter}"
+                    style="@style/content_text"
+                    />
+
+            </LinearLayout>
+
+            <!-- UpdateUserId -->
+
+            <LinearLayout
+                android:layout_marginTop="@dimen/content_margin_top"
+                style="@style/content_panel"  >
+                <TextView
+                    style="@style/content_label"
+                    android:text="@string/lb_updateusername" />
+
+                <TextView
+                    android:id="@+id/updateuserid"
+                    android:tag="{Value:UpdateUserName,ClickCommand:NavigateToUpdateUser}"
+                    style="@style/content_text"
+                    />
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+</ScrollView>

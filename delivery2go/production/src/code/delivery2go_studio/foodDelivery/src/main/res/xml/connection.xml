@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+    <PreferenceCategory android:title="@string/lblconexiones" >
+        <EditTextPreference
+            android:dialogTitle="@string/lblservicios"
+            android:key="BASE_URL"
+            android:defaultValue="http://192.168.100.1:2233/api/"
+            android:summary="@string/lblpaginaservicios"
+            android:title="@string/lblservicios"
+            android:inputType="textUri"
+            android:singleLine="true"
+            android:maxLines="1" />
+    </PreferenceCategory>
+
+    <!--<PreferenceCategory android:title="@string/app_mode" >-->
+        <!--<CheckBoxPreference-->
+            <!--android:key="ONLINE_MODE"-->
+            <!--android:title="Online"-->
+            <!--android:summary="Use this feature for demonstration purpose only"-->
+            <!--android:defaultValue="true" />-->
+
+    <!--</PreferenceCategory>-->
+
+    <Preference
+        android:title="@string/about"
+        android:icon="@drawable/ic_action_info">
+        <intent android:action="com.delivery2go.ABOUT" />
+    </Preference>
+
+</PreferenceScreen>

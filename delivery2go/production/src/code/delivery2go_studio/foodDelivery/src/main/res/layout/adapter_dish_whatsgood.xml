@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:gravity="center_horizontal"   
+    android:background="#ff000000" >
+
+    <ImageView
+        android:id="@+id/imageView1"
+        android:layout_width="60dip"
+        android:layout_height="60dip"
+        android:src="@drawable/sample_image"
+        android:tag="{Value:Image}"
+        android:scaleType="fitXY"
+        android:padding="1dp"
+        android:background="@drawable/white_round_rect" />
+
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_width="130dp"
+        android:layout_height="wrap_content"
+        android:text="Bacon Cheese Salad"
+        android:gravity="center"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        android:singleLine="true"
+        android:ellipsize="end"
+        android:tag="{Value:Name}" />
+
+</LinearLayout>

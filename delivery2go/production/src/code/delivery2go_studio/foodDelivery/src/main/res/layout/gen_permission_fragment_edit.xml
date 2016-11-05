@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView  xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:tools="http://schemas.android.com/tools"
+	android:layout_width="fill_parent"
+	android:layout_height="fill_parent">
+<LinearLayout 	android:layout_width="match_parent"
+	android:layout_height="match_parent"
+	android:orientation="vertical"
+	android:paddingTop="@dimen/content_padding_top"
+	android:paddingBottom="@dimen/content_padding_bottom"
+	android:tag="{Value:Item}" >
+
+	<!-- RollId -->
+
+	<LinearLayout style="@style/content_edit_panel"  >
+		<TextView 
+			style="@style/content_label" 
+			android:text="@string/rollid" />
+
+		<Spinner 
+			android:id="@+id/rollid"
+			style="@style/content_spinner" 
+			android:tag="{Value:RollId, Items:Rolls, Comparer:RollComparer, Key:Id, Required:true, Label:rollid}" /> 
+
+	</LinearLayout>
+
+	<!-- UserId -->
+
+	<LinearLayout android:layout_marginTop="@dimen/content_margin_top" 
+style="@style/content_edit_panel"  >
+		<TextView 
+			style="@style/content_label" 
+			android:text="@string/userid" />
+
+		<Spinner 
+			android:id="@+id/userid"
+			style="@style/content_spinner" 
+			android:tag="{Value:UserId, Items:Users, Comparer:UserComparer, Key:Id, Required:true, Label:userid}" /> 
+
+	</LinearLayout>
+
+	<!-- CanRead -->
+
+	<LinearLayout android:layout_marginTop="@dimen/content_margin_top" 
+style="@style/content_edit_panel"  >
+
+		<CheckBox 
+			android:id="@+id/canread"
+			style="@style/content_checkbox" 
+			android:text="@string/canread" 
+			android:tag="{Value:CanRead, Label:canread}"/>
+
+	</LinearLayout>
+
+	<!-- CanWrite -->
+
+	<LinearLayout android:layout_marginTop="@dimen/content_margin_top" 
+style="@style/content_edit_panel"  >
+
+		<CheckBox 
+			android:id="@+id/canwrite"
+			style="@style/content_checkbox" 
+			android:text="@string/canwrite" 
+			android:tag="{Value:CanWrite, Label:canwrite}"/>
+
+	</LinearLayout>
+
+	<!-- CanCreate -->
+
+	<LinearLayout android:layout_marginTop="@dimen/content_margin_top" 
+style="@style/content_edit_panel"  >
+
+		<CheckBox 
+			android:id="@+id/cancreate"
+			style="@style/content_checkbox" 
+			android:text="@string/cancreate" 
+			android:tag="{Value:CanCreate, Label:cancreate}"/>
+
+	</LinearLayout>
+
+	<!-- CanDelete -->
+
+	<LinearLayout android:layout_marginTop="@dimen/content_margin_top" 
+style="@style/content_edit_panel"  >
+
+		<CheckBox 
+			android:id="@+id/candelete"
+			style="@style/content_checkbox" 
+			android:text="@string/candelete" 
+			android:tag="{Value:CanDelete, Label:candelete}"/>
+
+	</LinearLayout>
+</LinearLayout>
+</ScrollView>

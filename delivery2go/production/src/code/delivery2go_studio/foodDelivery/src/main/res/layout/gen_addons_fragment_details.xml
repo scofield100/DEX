@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView  xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:tools="http://schemas.android.com/tools"
+	android:layout_width="fill_parent"
+	android:layout_height="fill_parent">
+<LinearLayout 	android:layout_width="match_parent"
+	android:layout_height="match_parent"
+	android:orientation="vertical"
+	android:paddingTop="@dimen/content_padding_top"
+	android:paddingBottom="@dimen/content_padding_bottom"
+	android:paddingLeft="@dimen/activity_horizontal_margin"
+	android:paddingRight="@dimen/activity_horizontal_margin"
+	android:tag="{Value:Item}" >
+
+	<!-- Name -->
+
+	<LinearLayout 
+		style="@style/content_panel"  >
+		<TextView 
+			style="@style/content_label" 
+			android:text="@string/lb_name" />
+
+		<TextView 
+			android:id="@+id/name"
+			android:tag="{Value:Name}" 
+			style="@style/content_text" 
+/>
+
+	</LinearLayout>
+
+	<!-- EntityId -->
+
+	<LinearLayout 
+		android:layout_marginTop="@dimen/content_margin_top"
+		style="@style/content_panel"  >
+		<TextView 
+			style="@style/content_label" 
+			android:text="@string/lb_entityname" />
+
+		<TextView 
+			android:id="@+id/entityid"
+			android:tag="{Value:EntityName}"
+			style="@style/content_text"
+/>
+
+	</LinearLayout>
+
+	<!-- Price -->
+
+	<LinearLayout 
+		android:layout_marginTop="@dimen/content_margin_top"
+		style="@style/content_panel"  >
+		<TextView 
+			style="@style/content_label" 
+			android:text="@string/lb_price" />
+
+		<TextView 
+			android:id="@+id/price"
+			android:tag="{Value:Price, Converter:CurrencyConverter}" 
+			style="@style/content_text" 
+/>
+
+	</LinearLayout>
+
+	<!-- AvailableCount -->
+
+	<LinearLayout
+		android:layout_marginTop="@dimen/content_margin_top"
+		style="@style/content_panel"  >
+		<TextView
+			style="@style/content_label"
+			android:text="@string/lb_availablecount" />
+
+		<TextView
+			android:id="@+id/availablecount"
+			android:tag="{Value:AvailableCount}"
+			style="@style/content_text"
+			/>
+
+	</LinearLayout>
+
+
+	<!-- IsAvailable -->
+
+
+		<CheckBox 
+			android:id="@+id/isavailable"
+			style="@style/content_label"
+			android:text="@string/lb_isavailable"
+			android:clickable="false"
+			android:tag="{Value:IsAvailable}" />
+
+
+	<!-- IsDressing -->
+
+
+		<CheckBox 
+			android:id="@+id/isdressing"
+			style="@style/content_label"
+			android:clickable="false"
+			android:text="@string/lb_isdressing"
+			android:tag="{Value:IsDressing}" />
+
+
+	<View
+		android:layout_marginTop="@dimen/content_margin_top"
+		android:layout_width="match_parent"
+		android:layout_height="2dp"
+		android:background="@color/ActionBarTabColor" />
+	<!-- UpdateUserId -->
+
+	<LinearLayout 
+		android:layout_marginTop="@dimen/content_margin_top"
+		style="@style/content_panel"  >
+		<TextView 
+			style="@style/content_label" 
+			android:text="@string/lb_updateusername" />
+
+		<TextView 
+			android:id="@+id/updateuserid"
+			android:tag="{Value:UpdateUserName}"
+			style="@style/content_text" />
+
+	</LinearLayout>
+
+	<!-- UpdateDate -->
+
+	<LinearLayout 
+		android:layout_marginTop="@dimen/content_margin_top"
+		style="@style/content_panel"  >
+		<TextView 
+			style="@style/content_label" 
+			android:text="@string/lb_updatedate" />
+
+		<TextView 
+			android:id="@+id/updatedate"
+			android:tag="{Value:UpdateDate, Converter:DateConverter}" 
+			style="@style/content_text" 
+/>
+
+	</LinearLayout>
+</LinearLayout>
+</ScrollView>

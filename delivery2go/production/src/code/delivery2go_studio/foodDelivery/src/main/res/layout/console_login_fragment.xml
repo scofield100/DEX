@@ -1,0 +1,125 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:background="@drawable/home_background"
+     >
+
+
+    <LinearLayout
+        android:id="@+id/imageView1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        >
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:scaleType="center"
+            android:src="@drawable/logo" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:text="@string/administration_console"
+            android:gravity="center"
+            android:padding="10dp"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textColor="#484848"
+            android:textStyle="bold"
+            />
+
+    </LinearLayout>
+
+    <!--     <ImageView -->
+    <!--         android:id="@+id/imageView1" -->
+    <!--         android:layout_width="250dp" -->
+    <!--         android:layout_height="150dp" -->
+    <!--         android:layout_alignParentLeft="true" -->
+    <!--         android:layout_alignParentRight="true" -->
+    <!--         android:layout_alignParentTop="true" -->
+    <!--         android:src="@drawable/login_logo" /> -->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_below="@+id/imageView1"
+        android:gravity="center_horizontal"
+        android:layout_marginTop="10dp" >
+
+        <EditText
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:drawableLeft="@drawable/photo"
+            android:hint="@string/username"
+            android:tag="{Value:Username, Required:true}"
+            android:inputType="textPersonName"
+            android:singleLine="true"
+            android:background="@drawable/custom_edit_text"/>
+
+        <EditText
+            android:layout_marginTop="@dimen/content_margin_top"
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:drawableLeft="@drawable/ic_menu_login_hdpi"
+            android:hint="@string/password"
+            android:inputType="textPassword"
+            android:singleLine="true"
+            android:tag="{Value:Password, Required:true}"
+            android:background="@drawable/custom_edit_text" />
+
+        <RelativeLayout android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <Switch
+                android:layout_centerHorizontal="true"
+                android:id="@+id/switch1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/remember_me"
+                android:textOff="No"
+                android:textOn="Si"
+                android:checked="true"
+                android:tag="{Value:RememberMe}" />
+
+            <LinearLayout android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/switch1"
+                android:gravity="center_horizontal"
+                android:layout_marginTop="@dimen/activity_vertical_margin">
+
+                <Button
+                    android:id="@+id/button1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/switch1"
+                    android:drawableLeft="@drawable/btn_login"
+                    android:background="@null"
+                    android:drawablePadding="5dp"
+                    android:text="@string/login"
+                    android:tag="{ClickCommand:LogIn}"
+
+                    />
+
+                <Button
+                    android:layout_marginLeft="@dimen/content_margin_left"
+                    android:id="@+id/button2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:drawableLeft="@drawable/btn_open_register"
+                    android:background="@null"
+                    android:drawablePadding="5dp"
+                    android:text="@string/register"
+                    android:tag="{ClickCommand:Register}"
+                    />
+            </LinearLayout>
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+</RelativeLayout>

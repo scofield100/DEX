@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:id="@+id/header"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="20dp">
+
+        <TextView
+            android:id="@+id/username"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:gravity="center_vertical|right"
+            android:drawablePadding="5dp"
+            android:tag="{Value:CurrentClient}"
+            android:drawableRight="@drawable/ic_action_info" />
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/logInPanel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_below="@+id/header"
+        android:gravity="center_horizontal"
+        android:layout_marginTop="10dp" >
+
+        <EditText
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:drawableLeft="@drawable/photo"
+            android:hint="Username"
+            android:tag="{Value:Username, Required:true}"
+            android:singleLine="true"
+            android:inputType="textPersonName"
+            android:background="@drawable/textfield_disabled"/>
+
+        <EditText
+            android:layout_marginTop="5dp"
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:drawableLeft="@drawable/ic_menu_login_hdpi"
+            android:hint="Password"
+            android:singleLine="true"
+            android:inputType="textPassword"
+            android:tag="{Value:Password, Required:true}"
+            android:background="@drawable/textfield_disabled" />
+
+        <RelativeLayout android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+        <Switch
+            android:layout_centerHorizontal="true"
+            android:id="@+id/switch1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Remember me"
+            android:textOff="No"
+            android:textOn="Yes"
+            android:checked="true"
+            android:tag="{Value:RememberMe}" />
+        </RelativeLayout>
+
+    </LinearLayout>
+
+    <LinearLayout android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/logInPanel"
+        android:gravity="center_horizontal"
+        android:layout_marginTop="@dimen/activity_vertical_margin">
+
+        <Button
+            android:id="@+id/button1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/switch1"
+            android:drawableLeft="@drawable/btn_login"
+            android:background="@null"
+            android:drawablePadding="5dp"
+            android:text="Log in"
+            android:tag="{ClickCommand:LogIn}"
+            />
+
+
+
+
+    </LinearLayout>
+
+
+
+</RelativeLayout>

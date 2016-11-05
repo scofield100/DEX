@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"  
+    android:background="@drawable/category_tab_background"
+    android:tag="{ClickCommand:OnSelect}"
+    android:layout_weight="1" >
+
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"        
+        android:text="Spicy"
+        android:singleLine="true"
+        android:ellipsize="end"      
+        android:padding="10dp"
+        android:layout_centerHorizontal="true"
+        android:gravity="center"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:tag="{Value:Name}" />
+    
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="5dp"
+        android:layout_alignRight="@+id/textView1"
+        android:layout_alignLeft="@+id/textView1"
+        android:layout_below="@+id/textView1"        
+        android:background="@color/ActionBarTabTextColor"
+        android:tag="{Visibility:Selected}" />
+
+</RelativeLayout>

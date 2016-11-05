@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView  xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:tools="http://schemas.android.com/tools"
+	android:layout_width="fill_parent"
+	android:layout_height="fill_parent">
+<LinearLayout 	android:layout_width="match_parent"
+	android:layout_height="match_parent"
+	android:orientation="vertical"
+	android:paddingTop="@dimen/content_padding_top"
+	android:paddingBottom="@dimen/content_padding_bottom" 
+	android:tag="{Value:Item}" >
+
+	<!-- OrderId -->
+
+	<LinearLayout 
+		style="@style/content_panel"  >
+		<TextView 
+			style="@style/content_label" 
+			android:text="@string/lb_ordercode" />
+
+		<TextView 
+			android:id="@+id/orderid"
+			android:tag="{Value:OrderCode,ClickCommand:NavigateToOrder}" 
+			style="@style/content_nav" 
+/>
+
+	</LinearLayout>
+
+	<!-- DishId -->
+
+	<LinearLayout 
+		android:layout_marginTop="@dimen/content_margin_top"
+		style="@style/content_panel"  >
+		<TextView 
+			style="@style/content_label" 
+			android:text="@string/lb_dishname" />
+
+		<TextView 
+			android:id="@+id/dishid"
+			android:tag="{Value:DishName,ClickCommand:NavigateToDish}" 
+			style="@style/content_nav" 
+/>
+
+	</LinearLayout>
+
+	<!-- DishPrice -->
+
+	<LinearLayout 
+		android:layout_marginTop="@dimen/content_margin_top"
+		style="@style/content_panel"  >
+		<TextView 
+			style="@style/content_label" 
+			android:text="@string/lb_dishprice" />
+
+		<TextView 
+			android:id="@+id/dishprice"
+			android:tag="{Value:DishPrice}" 
+			style="@style/content_text" 
+/>
+
+	</LinearLayout>
+
+	<!-- Quantity -->
+
+	<LinearLayout 
+		android:layout_marginTop="@dimen/content_margin_top"
+		style="@style/content_panel"  >
+		<TextView 
+			style="@style/content_label" 
+			android:text="@string/lb_quantity" />
+
+		<TextView 
+			android:id="@+id/quantity"
+			android:tag="{Value:Quantity}" 
+			style="@style/content_text" 
+/>
+
+	</LinearLayout>
+
+	<!-- SizeId -->
+
+	<LinearLayout 
+		android:layout_marginTop="@dimen/content_margin_top"
+		style="@style/content_panel"  >
+		<TextView 
+			style="@style/content_label" 
+			android:text="@string/lb_sizeid" />
+
+		<TextView 
+			android:id="@+id/sizeid"
+			android:tag="{Value:SizeId,ClickCommand:NavigateToSize}" 
+			style="@style/content_nav" 
+/>
+
+	</LinearLayout>
+
+	<!-- DressingId -->
+
+	<LinearLayout 
+		android:layout_marginTop="@dimen/content_margin_top"
+		style="@style/content_panel"  >
+		<TextView 
+			style="@style/content_label" 
+			android:text="@string/lb_dressingname" />
+
+		<TextView 
+			android:id="@+id/dressingid"
+			android:tag="{Value:DressingName,ClickCommand:NavigateToDressing}" 
+			style="@style/content_nav" 
+/>
+
+	</LinearLayout>
+
+	<!-- DressingPrice -->
+
+	<LinearLayout 
+		android:layout_marginTop="@dimen/content_margin_top"
+		style="@style/content_panel"  >
+		<TextView 
+			style="@style/content_label" 
+			android:text="@string/lb_dressingprice" />
+
+		<TextView 
+			android:id="@+id/dressingprice"
+			android:tag="{Value:DressingPrice}" 
+			style="@style/content_text" 
+/>
+
+	</LinearLayout>
+
+	<!-- SubTotal -->
+
+	<LinearLayout 
+		android:layout_marginTop="@dimen/content_margin_top"
+		style="@style/content_panel"  >
+		<TextView 
+			style="@style/content_label" 
+			android:text="@string/lb_subtotal" />
+
+		<TextView 
+			android:id="@+id/subtotal"
+			android:tag="{Value:SubTotal}" 
+			style="@style/content_text" 
+/>
+
+	</LinearLayout>
+
+	<!-- UpdateDate -->
+
+	<LinearLayout 
+		android:layout_marginTop="@dimen/content_margin_top"
+		style="@style/content_panel"  >
+		<TextView 
+			style="@style/content_label" 
+			android:text="@string/lb_updatedate" />
+
+		<TextView 
+			android:id="@+id/updatedate"
+			android:tag="{Value:UpdateDate, Converter:DateConverter}" 
+			style="@style/content_text" 
+/>
+
+	</LinearLayout>
+
+	<!-- Remarks -->
+
+	<LinearLayout 
+		android:layout_marginTop="@dimen/content_margin_top"
+		style="@style/content_panel"  >
+		<TextView 
+			style="@style/content_label" 
+			android:text="@string/lb_remarks" />
+
+		<TextView 
+			android:id="@+id/remarks"
+			android:tag="{Value:Remarks}" 
+			style="@style/content_text" 
+/>
+
+	</LinearLayout>
+
+	<!-- UpdateUserId -->
+
+	<LinearLayout 
+		android:layout_marginTop="@dimen/content_margin_top"
+		style="@style/content_panel"  >
+		<TextView 
+			style="@style/content_label" 
+			android:text="@string/lb_updateusername" />
+
+		<TextView 
+			android:id="@+id/updateuserid"
+			android:tag="{Value:UpdateUserName,ClickCommand:NavigateToUpdateUser}" 
+			style="@style/content_nav" 
+/>
+
+	</LinearLayout>
+</LinearLayout>
+</ScrollView>

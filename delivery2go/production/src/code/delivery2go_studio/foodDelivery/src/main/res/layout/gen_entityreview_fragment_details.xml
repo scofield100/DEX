@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView  xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:tools="http://schemas.android.com/tools"
+	android:layout_width="fill_parent"
+	android:layout_height="fill_parent">
+<LinearLayout 	android:layout_width="match_parent"
+	android:layout_height="match_parent"
+	android:orientation="vertical"
+	android:paddingTop="@dimen/content_padding_top"
+	android:paddingBottom="@dimen/content_padding_bottom" 
+	android:tag="{Value:Item}" >
+
+	<!-- Rating -->
+
+	<LinearLayout 
+		style="@style/content_panel"  >
+		<TextView 
+			style="@style/content_label" 
+			android:text="@string/lb_rating" />
+
+		<TextView 
+			android:id="@+id/rating"
+			android:tag="{Value:Rating}" 
+			style="@style/content_text" 
+/>
+
+	</LinearLayout>
+
+	<!-- ClientId -->
+
+	<LinearLayout 
+		android:layout_marginTop="@dimen/content_margin_top"
+		style="@style/content_panel"  >
+		<TextView 
+			style="@style/content_label" 
+			android:text="@string/lb_clientname" />
+
+		<TextView 
+			android:id="@+id/clientid"
+			android:tag="{Value:ClientName,ClickCommand:NavigateToClient}" 
+			style="@style/content_nav" 
+/>
+
+	</LinearLayout>
+
+	<!-- EntityId -->
+
+	<LinearLayout 
+		android:layout_marginTop="@dimen/content_margin_top"
+		style="@style/content_panel"  >
+		<TextView 
+			style="@style/content_label" 
+			android:text="@string/lb_entityname" />
+
+		<TextView 
+			android:id="@+id/entityid"
+			android:tag="{Value:EntityName,ClickCommand:NavigateToEntity}" 
+			style="@style/content_nav" 
+/>
+
+	</LinearLayout>
+
+	<!-- Description -->
+
+	<LinearLayout 
+		android:layout_marginTop="@dimen/content_margin_top"
+		style="@style/content_panel"  >
+		<TextView 
+			style="@style/content_label" 
+			android:text="@string/lb_description" />
+
+		<TextView 
+			android:id="@+id/description"
+			android:tag="{Value:Description}" 
+			style="@style/content_text" 
+/>
+
+	</LinearLayout>
+
+	<!-- UpdateDate -->
+
+	<LinearLayout 
+		android:layout_marginTop="@dimen/content_margin_top"
+		style="@style/content_panel"  >
+		<TextView 
+			style="@style/content_label" 
+			android:text="@string/lb_updatedate" />
+
+		<TextView 
+			android:id="@+id/updatedate"
+			android:tag="{Value:UpdateDate, Converter:DateConverter}" 
+			style="@style/content_text" 
+/>
+
+	</LinearLayout>
+</LinearLayout>
+</ScrollView>

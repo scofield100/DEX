@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView  xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:tools="http://schemas.android.com/tools"
+	android:layout_width="fill_parent"
+	android:layout_height="fill_parent">
+<LinearLayout 	android:layout_width="match_parent"
+	android:layout_height="match_parent"
+	android:orientation="vertical"
+	android:paddingLeft="@dimen/activity_horizontal_margin"
+	android:paddingRight="@dimen/activity_horizontal_margin"
+	android:paddingTop="@dimen/activity_vertical_margin"
+	android:paddingBottom="@dimen/activity_vertical_margin"
+	android:tag="{Value:Item}" >
+
+	<!-- Name -->
+
+	<LinearLayout style="@style/content_edit_panel"  >
+		<TextView 
+			style="@style/content_label" 
+			android:text="@string/name" />
+
+		<EditText 
+			android:id="@+id/name"
+			style="@style/content_text_edit"
+			android:hint="@string/required"
+			android:tag="{Value:Name, Required:true, Label:name}" android:inputType="textPersonName"  />
+
+	</LinearLayout>
+
+    <!-- Price -->
+
+    <LinearLayout android:layout_marginTop="@dimen/content_margin_top"
+        style="@style/content_edit_panel"  >
+        <TextView
+            style="@style/content_label"
+            android:text="@string/price" />
+
+        <EditText
+            android:id="@+id/price"
+            style="@style/content_text_edit"
+            android:hint="@string/required"
+            android:tag="{Value:Price, Converter:DoubleConverter, Required:true, Label:price}"
+            android:inputType="numberDecimal|number"  />
+
+    </LinearLayout>
+
+    <!--&lt;!&ndash; EntityId &ndash;&gt;-->
+
+    <!--<LinearLayout android:layout_marginTop="@dimen/content_margin_top"-->
+        <!--style="@style/content_edit_panel"  >-->
+        <!--<TextView-->
+            <!--style="@style/content_label"-->
+            <!--android:text="@string/entityid" />-->
+
+        <!--<Spinner-->
+            <!--android:id="@+id/entityid"-->
+            <!--style="@style/content_spinner"-->
+            <!--android:tag="{Value:EntityId, Items:Entities, Comparer:EntityComparer, Key:Id, Required:true, Label:entityid}" />-->
+
+    <!--</LinearLayout>-->
+
+    <!-- Tags -->
+
+    <LinearLayout android:layout_marginTop="@dimen/content_margin_top"
+        style="@style/content_edit_panel"  >
+        <TextView
+            style="@style/content_label"
+            android:text="@string/tags" />
+
+        <EditText
+            android:id="@+id/tags"
+            style="@style/content_text_edit"
+            android:hint="Search terms separated by space"
+            android:tag="{Value:Tags, Label:tags}" android:inputType="text"  />
+
+    </LinearLayout>
+
+    <!-- ImageId -->
+
+    <LinearLayout android:layout_marginTop="@dimen/content_margin_top"
+        style="@style/content_edit_panel"  >
+        <TextView
+            style="@style/content_label"
+            android:text="@string/imageid" />
+
+        <Spinner
+            android:id="@+id/imageid"
+            style="@style/content_spinner"
+            android:tag="{Value:ImageId, Items:ImagesOptional, Comparer:ImageComparer, Key:Id, Label:imageid, ItemTemplate:spinner_image_adapter}" />
+
+    </LinearLayout>
+
+    <!-- MenuId -->
+
+    <LinearLayout android:layout_marginTop="@dimen/content_margin_top"
+        style="@style/content_edit_panel"  >
+        <TextView
+            style="@style/content_label"
+            android:text="@string/menuid" />
+
+        <Spinner
+            android:id="@+id/menuid"
+            style="@style/content_spinner"
+            android:tag="{Value:MenuId, Items:EntityMenusOptional, Comparer:EntityMenuComparer, Key:Id, Label:menuid}" />
+
+    </LinearLayout>
+
+    <!-- AvailableCount -->
+
+    <LinearLayout android:layout_marginTop="@dimen/content_margin_top"
+        style="@style/content_edit_panel"  >
+        <TextView
+            style="@style/content_label"
+            android:text="@string/availablecount" />
+
+        <EditText
+            android:id="@+id/availablecount"
+            style="@style/content_text_edit"
+            android:hint="The number available"
+            android:tag="{Value:AvailableCount, Converter:IntegerConverterNullable, Label:availablecount}" android:inputType="number"  />
+
+    </LinearLayout>
+
+
+    <!-- IsAvailable -->
+
+	<LinearLayout android:layout_marginTop="@dimen/content_margin_top" 
+style="@style/content_edit_panel"  >
+
+		<CheckBox 
+			android:id="@+id/isavailable"
+			style="@style/content_checkbox" 
+			android:text="@string/isavailable" 
+			android:tag="{Value:IsAvailable, Label:isavailable}"/>
+
+	</LinearLayout>
+
+
+
+
+
+	<!-- InWhatsGood -->
+
+	<LinearLayout android:layout_marginTop="@dimen/content_margin_top" 
+style="@style/content_edit_panel"  >
+
+		<CheckBox 
+			android:id="@+id/inwhatsgood"
+			style="@style/content_checkbox" 
+			android:text="@string/inwhatsgood" 
+			android:tag="{Value:InWhatsGood, Label:inwhatsgood}"/>
+
+	</LinearLayout>
+
+	<!-- Description -->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="10dp"
+        android:layout_marginTop="@dimen/content_margin_top"
+        android:background="@drawable/white_round_rect">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Description"
+            android:textColor="@color/text_secondary"/>
+
+		<EditText 
+			android:id="@+id/description"
+			style="@style/content_text_edit"
+			android:tag="{Value:Description, Label:description}" android:maxLines="3" android:minLines="3" android:inputType="textMultiLine"  />
+
+	</LinearLayout>
+
+
+
+</LinearLayout>
+</ScrollView>

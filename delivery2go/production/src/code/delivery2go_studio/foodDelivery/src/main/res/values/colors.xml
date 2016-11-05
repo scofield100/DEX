@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:android="http://schemas.android.com/apk/res/android">
+    <color name="gray" >#e6e6e6</color>
+    <color name="white" >#FFFFFF</color>
+
+    <color name="ActionBarColor">#ff0000</color>
+    <color name="ActionBarBackground">#920905</color>
+    <color name="ActionBarTabColor">#be0a05</color>
+    <!--<color name="ActionBarTabTextColor">#ffbb33</color> -->
+    <color name="ActionBarTabTextColor">#ffffffff</color>
+    <color name="ActionBarIndicatorColor">#ffff00</color>
+    <color name="ActivityBackground">#ffe9d2</color>
+    <color name="BackgroundAlt">#ffd5aa</color>
+    <color name="text_secondary">#a4a4a4</color>
+    <color name="text_adress">#727272</color>
+    <color name="TabSelected">#fb8b88</color>
+    <color name="AddToCard">#ff0099cc</color>
+    <color name="AddToCardPressed">#ff18f0f5</color>
+    <color name="Line">#ffbb33</color>
+
+    <color name="order_open">#fff909</color>
+    <color name="order_sumbited">#0869cf</color>
+    <color name="order_ready">#0caeff</color>
+    <color name="order_on_the_way">#0fffc5</color>
+    <color name="order_arrived">#15ff0b</color>
+    <color name="order_delivered">#8d8d86</color>
+    <color name="order_cancelled">#ff0419</color>
+</resources>

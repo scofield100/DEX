@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView  xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:tools="http://schemas.android.com/tools"
+	android:layout_width="fill_parent"
+	android:layout_height="fill_parent">
+<LinearLayout 	android:layout_width="match_parent"
+	android:layout_height="match_parent"
+	android:orientation="vertical"
+	android:paddingTop="@dimen/content_padding_top"
+	android:paddingBottom="@dimen/content_padding_bottom"
+	android:tag="{Value:Item}" >
+
+	<!-- OrderId -->
+
+	<LinearLayout style="@style/content_edit_panel"  >
+		<TextView 
+			style="@style/content_label" 
+			android:text="@string/orderid" />
+
+		<Spinner 
+			android:id="@+id/orderid"
+			style="@style/content_spinner" 
+			android:tag="{Value:OrderId, Items:Orders, Comparer:OrderComparer, Key:OrderId, Required:true, Label:orderid}" /> 
+
+	</LinearLayout>
+
+	<!-- DishId -->
+
+	<LinearLayout android:layout_marginTop="@dimen/content_margin_top" 
+style="@style/content_edit_panel"  >
+		<TextView 
+			style="@style/content_label" 
+			android:text="@string/dishid" />
+
+		<Spinner 
+			android:id="@+id/dishid"
+			style="@style/content_spinner" 
+			android:tag="{Value:DishId, Items:Dishs, Comparer:DishComparer, Key:Id, Required:true, Label:dishid}" /> 
+
+	</LinearLayout>
+
+	<!-- DishPrice -->
+
+	<LinearLayout android:layout_marginTop="@dimen/content_margin_top" 
+style="@style/content_edit_panel"  >
+		<TextView 
+			style="@style/content_label" 
+			android:text="@string/dishprice" />
+
+		<EditText 
+			android:id="@+id/dishprice"
+			style="@style/content_text_edit" 
+			android:tag="{Value:DishPrice, Converter:DoubleConverter, Required:true, Label:dishprice}" android:inputType="numberDecimal"  />
+
+	</LinearLayout>
+
+	<!-- Quantity -->
+
+	<LinearLayout android:layout_marginTop="@dimen/content_margin_top" 
+style="@style/content_edit_panel"  >
+		<TextView 
+			style="@style/content_label" 
+			android:text="@string/quantity" />
+
+		<EditText 
+			android:id="@+id/quantity"
+			style="@style/content_text_edit" 
+			android:tag="{Value:Quantity, Converter:IntegerConverter, Required:true, Label:quantity}" android:inputType="number"  />
+
+	</LinearLayout>
+
+	<!-- SizeId -->
+
+	<LinearLayout android:layout_marginTop="@dimen/content_margin_top" 
+style="@style/content_edit_panel"  >
+		<TextView 
+			style="@style/content_label" 
+			android:text="@string/sizeid" />
+
+		<Spinner 
+			android:id="@+id/sizeid"
+			style="@style/content_spinner" 
+			android:tag="{Value:SizeId, Items:DishSizePricesOptional, Comparer:DishSizePriceComparer, Key:Id, Label:sizeid}" /> 
+
+	</LinearLayout>
+
+	<!-- DressingId -->
+
+	<LinearLayout android:layout_marginTop="@dimen/content_margin_top" 
+style="@style/content_edit_panel"  >
+		<TextView 
+			style="@style/content_label" 
+			android:text="@string/dressingid" />
+
+		<Spinner 
+			android:id="@+id/dressingid"
+			style="@style/content_spinner" 
+			android:tag="{Value:DressingId, Items:AddonsesOptional, Comparer:AddonsComparer, Key:Id, Label:dressingid}" /> 
+
+	</LinearLayout>
+
+	<!-- DressingPrice -->
+
+	<LinearLayout android:layout_marginTop="@dimen/content_margin_top" 
+style="@style/content_edit_panel"  >
+		<TextView 
+			style="@style/content_label" 
+			android:text="@string/dressingprice" />
+
+		<EditText 
+			android:id="@+id/dressingprice"
+			style="@style/content_text_edit" 
+			android:tag="{Value:DressingPrice, Converter:DoubleConverterNullable, Label:dressingprice}" android:inputType="numberDecimal"  />
+
+	</LinearLayout>
+
+	<!-- SubTotal -->
+
+	<LinearLayout android:layout_marginTop="@dimen/content_margin_top" 
+style="@style/content_edit_panel"  >
+		<TextView 
+			style="@style/content_label" 
+			android:text="@string/subtotal" />
+
+		<EditText 
+			android:id="@+id/subtotal"
+			style="@style/content_text_edit" 
+			android:tag="{Value:SubTotal, Converter:DoubleConverterNullable, Label:subtotal}" android:inputType="numberDecimal"  />
+
+	</LinearLayout>
+
+	<!-- Remarks -->
+
+	<LinearLayout android:layout_marginTop="@dimen/content_margin_top" 
+style="@style/content_edit_panel"  >
+		<TextView 
+			style="@style/content_label" 
+			android:text="@string/remarks" />
+
+		<EditText 
+			android:id="@+id/remarks"
+			style="@style/content_text_edit" 
+			android:tag="{Value:Remarks, Label:remarks}" android:inputType="text"  />
+
+	</LinearLayout>
+
+	<!-- UpdateUserId -->
+
+	<LinearLayout android:layout_marginTop="@dimen/content_margin_top" 
+style="@style/content_edit_panel"  >
+		<TextView 
+			style="@style/content_label" 
+			android:text="@string/updateuserid" />
+
+		<Spinner 
+			android:id="@+id/updateuserid"
+			style="@style/content_spinner" 
+			android:tag="{Value:UpdateUserId, Items:UsersOptional, Comparer:UserComparer, Key:Id, Label:updateuserid}" /> 
+
+	</LinearLayout>
+</LinearLayout>
+</ScrollView>

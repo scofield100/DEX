@@ -1,0 +1,254 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView  xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:tools="http://schemas.android.com/tools"
+	android:layout_width="fill_parent"
+	android:layout_height="fill_parent">
+
+<LinearLayout 	android:layout_width="match_parent"
+	android:layout_height="match_parent"
+	android:orientation="vertical"
+	android:paddingTop="@dimen/content_padding_top"
+	android:paddingBottom="@dimen/content_padding_bottom"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+	android:tag="{Value:Item}" >
+
+	<LinearLayout
+		android:orientation="vertical"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:padding="10dp" >
+
+		<RelativeLayout
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content" >
+
+			<ImageView
+				android:id="@+id/imageView1"
+				android:layout_width="@dimen/adapter_image"
+				android:layout_height="@dimen/adapter_image"
+                android:layout_alignParentTop="true"
+				android:tag="{Value:ImageId, Converter:ImageConverter}"  />
+
+
+			<LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+				android:layout_toRightOf="@+id/imageView1"
+				android:layout_alignParentTop="true"
+				android:layout_marginLeft="5dp"
+				android:orientation="vertical">
+
+				<TextView
+					android:layout_toRightOf="@id/imageView1"
+					android:id="@+id/name"
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content"
+					android:layout_toLeftOf="@+id/textView3"
+					android:text="ParisainSalad"
+					android:tag="{Value:Name,  Mode:OneWay}"
+					android:textAppearance="?android:attr/textAppearanceLarge" />
+
+				<TextView
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content"
+					android:text="Seniore's Pasta"
+					android:textColor="@color/text_secondary"
+					android:tag="{Value:EntityName, Mode:OneWay}"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/lb_price"/>
+                    <TextView
+                        android:id="@+id/textView3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/content_margin_left"
+                        android:text="$7.75"
+                        android:tag="{Value:Price, Converter:CurrencyConverter, Mode:OneWay}"
+                        android:textAppearance="?android:attr/textAppearanceSmall" />
+
+                </LinearLayout>
+
+			</LinearLayout>
+
+		</RelativeLayout>
+
+        <!-- Rating -->
+        <LinearLayout
+            android:id="@+id/ratingBar1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:tag="{Value:Ranking, ItemTemplate:adapter_rating, Converter:RankingConverter}"
+            />
+
+		<LinearLayout
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:layout_marginTop="@dimen/content_margin_top" >
+
+			<TextView
+				android:id="@+id/textView4"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:tag="{Value:OrderCount,  Mode:OneWay}"
+				android:textColor="@android:color/holo_orange_dark" />
+
+
+			<TextView
+				android:id="@+id/textView5"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:layout_marginLeft="@dimen/content_margin_left"
+				android:text="People ordered this"
+				android:textColor="@color/text_secondary" />
+
+		</LinearLayout>
+
+        <!-- Description -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="10dp"
+            android:layout_marginTop="@dimen/content_margin_top"
+            android:background="@drawable/white_round_rect">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Description"
+                android:textColor="@color/text_secondary"/>
+
+		<TextView
+			android:id="@+id/description"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:layout_marginTop="@dimen/content_margin_top"
+			android:tag="{Value:Description,  Mode:OneWay}"
+			 />
+        </LinearLayout>
+
+
+	</LinearLayout>
+
+
+
+	<!-- IsAvailable -->
+		<CheckBox 
+			android:id="@+id/isavailable"
+			style="@style/content_label"
+			android:clickable="false"
+            android:text="@string/isavailable"
+			android:tag="{Value:IsAvailable}" />
+
+
+
+	<!-- InWhatsGood -->
+		<CheckBox 
+			android:id="@+id/inwhatsgood"
+			style="@style/content_label"
+			android:clickable="false"
+            android:text="@string/inwhatsgood"
+			android:tag="{Value:InWhatsGood}" />
+
+
+
+
+	<!-- AvailableCount -->
+
+	<LinearLayout 
+		android:layout_marginTop="@dimen/content_margin_top"
+		style="@style/content_panel"  >
+		<TextView 
+			style="@style/content_label" 
+			android:text="@string/lb_availablecount" />
+
+		<TextView 
+			android:id="@+id/availablecount"
+			android:tag="{Value:AvailableCount}" 
+			style="@style/content_text" 
+/>
+
+	</LinearLayout>
+
+	<!-- Tags -->
+
+	<LinearLayout 
+		android:layout_marginTop="@dimen/content_margin_top"
+		style="@style/content_panel"  >
+		<TextView 
+			style="@style/content_label" 
+			android:text="@string/lb_tags" />
+
+		<TextView 
+			android:id="@+id/tags"
+			android:tag="{Value:Tags}" 
+			style="@style/content_text" 
+/>
+
+	</LinearLayout>
+
+	<!-- MenuId -->
+
+	<LinearLayout 
+		android:layout_marginTop="@dimen/content_margin_top"
+		style="@style/content_panel"  >
+		<TextView 
+			style="@style/content_label" 
+			android:text="@string/lb_menuname" />
+
+		<TextView 
+			android:id="@+id/menuid"
+			android:tag="{Value:MenuName}"
+            android:drawablePadding="5dp"
+			style="@style/content_text"
+/>
+
+	</LinearLayout>
+
+	<View
+		android:layout_marginTop="@dimen/content_margin_top"
+		android:layout_width="match_parent"
+		android:layout_height="2dp"
+		android:background="@color/ActionBarTabColor" />
+
+	<!-- UpdateUserId -->
+
+	<LinearLayout 
+		android:layout_marginTop="@dimen/content_margin_top"
+		style="@style/content_panel"  >
+		<TextView 
+			style="@style/content_label" 
+			android:text="@string/lb_updateusername" />
+
+		<TextView 
+			android:id="@+id/updateuserid"
+			android:tag="{Value:UpdateUserName}"
+            android:drawablePadding="5dp"
+			style="@style/content_text"
+/>
+
+	</LinearLayout>
+
+	<!-- UpdateDate -->
+
+	<LinearLayout 
+		android:layout_marginTop="@dimen/content_margin_top"
+		style="@style/content_panel"  >
+		<TextView 
+			style="@style/content_label" 
+			android:text="@string/lb_updatedate" />
+
+		<TextView 
+			android:id="@+id/updatedate"
+			android:tag="{Value:UpdateDate, Converter:DateConverter}" 
+			style="@style/content_text" 
+/>
+
+	</LinearLayout>
+</LinearLayout>
+</ScrollView>

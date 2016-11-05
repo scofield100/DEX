@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView  xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:tools="http://schemas.android.com/tools"
+	android:layout_width="fill_parent"
+	android:layout_height="fill_parent">
+<LinearLayout 	android:layout_width="match_parent"
+	android:layout_height="match_parent"
+	android:orientation="vertical"
+	android:paddingTop="@dimen/content_padding_top"
+	android:paddingBottom="@dimen/content_padding_bottom"
+	android:tag="{Value:Item}" >
+
+	<!-- EntityId -->
+
+	<LinearLayout style="@style/content_edit_panel"  >
+		<TextView 
+			style="@style/content_label" 
+			android:text="@string/entityid" />
+
+		<Spinner 
+			android:id="@+id/entityid"
+			style="@style/content_spinner" 
+			android:tag="{Value:EntityId, Items:Entities, Comparer:EntityComparer, Key:Id, Required:true, Label:entityid}" /> 
+
+	</LinearLayout>
+
+	<!-- CategoryId -->
+
+	<LinearLayout android:layout_marginTop="@dimen/content_margin_top" 
+style="@style/content_edit_panel"  >
+		<TextView 
+			style="@style/content_label" 
+			android:text="@string/categoryid" />
+
+		<Spinner 
+			android:id="@+id/categoryid"
+			style="@style/content_spinner" 
+			android:tag="{Value:CategoryId, Items:EntityCategories, Comparer:EntityCategoryComparer, Key:Id, Required:true, Label:categoryid}" /> 
+
+	</LinearLayout>
+</LinearLayout>
+</ScrollView>

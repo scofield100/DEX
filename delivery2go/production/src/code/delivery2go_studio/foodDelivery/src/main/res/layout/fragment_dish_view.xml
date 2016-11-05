@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<com.enterlib.widgets.ProgressLayout 
+   	 xmlns:android="http://schemas.android.com/apk/res/android"
+      xmlns:app="http://schemas.android.com/apk/res-auto"
+      android:id="@+id/container" 
+      android:layout_width="match_parent"
+      android:layout_height="match_parent">
+
+<RelativeLayout 
+	xmlns:tools="http://schemas.android.com/tools"
+	android:layout_width="fill_parent"
+	android:layout_height="fill_parent">
+	
+<ScrollView  
+	android:layout_width="match_parent"
+	android:layout_height="match_parent"
+	android:clipChildren="true"
+	android:layout_above="@+id/footerPanel">
+	
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:tag="{Value:Dish}">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/ActionBarBackground"
+        android:orientation="vertical">
+
+    <TextView
+        android:padding="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Chesse Hamburguer"
+        android:gravity="center"
+        android:textStyle="bold"
+        android:tag="{Value:Name}"
+        android:textColor="@color/white"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="5dp"
+            android:background="@color/ActionBarTabTextColor"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="5dp">
+
+    <ImageView
+        android:id="@+id/imageView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/sample_image"        
+        android:scaleType="centerCrop"
+        android:tag="{Value:SelectedImage}" />
+    
+    <android.support.v4.view.ViewPager xmlns:android="http://schemas.android.com/apk/res/android"
+		    xmlns:tools="http://schemas.android.com/tools"
+		    android:id="@+id/pager"
+		    android:layout_width="match_parent"
+		    android:layout_height="64dp"	    
+		    android:layout_gravity="center"
+		    android:overScrollMode="ifContentScrolls"			        
+	        android:tag="{Value:Images, 
+	        			  ItemTemplate:adapter_image, 
+	        			  AsList:true,
+	        			  SelectionCommand:OnItemCLick}"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="$10.99"
+        android:tag="{Value:PriceText}"
+        android:layout_gravity="right"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="5dp"
+        android:layout_weight="1"
+        android:background="@drawable/white_round_rect"
+        android:padding="5dp"
+        android:tag="{Value:Description}"
+        android:text="asdasd asd asd asd as das das dasd as dasd" />
+
+    </LinearLayout>
+         
+</LinearLayout>
+</ScrollView>
+
+<LinearLayout
+    android:id="@+id/footerPanel"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_alignParentBottom="true"
+    android:orientation="horizontal" >
+	
+	<Button
+	    android:layout_weight="1"
+	    android:id="@+id/btnClose"
+	    android:layout_width="wrap_content"
+	    android:layout_height="wrap_content"	   
+	    android:text="Close" 
+	    android:drawableLeft="@drawable/ic_action_cancel"/>
+	
+	<Button
+	    android:layout_weight="1"
+	        android:id="@+id/btnOrder"	        
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"	        	        
+	        android:drawableLeft="@drawable/ic_action_cart"        
+	        android:text="Order" />
+	
+	
+</LinearLayout>
+
+</RelativeLayout>
+</com.enterlib.widgets.ProgressLayout>

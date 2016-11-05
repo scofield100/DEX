@@ -1,0 +1,28 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 22
+    buildToolsVersion '22.0.1'
+    defaultConfig {
+        applicationId 'com.blackdragon.delivery2go'
+        minSdkVersion 16
+        targetSdkVersion 22
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.txt'
+        }
+    }
+    productFlavors {
+    }
+}
+
+dependencies {
+    compile files('libs/PayPal_MPL.jar')
+    compile 'com.android.support:support-v4:22.1.1'
+    compile 'com.android.support:support-v13:22.1.1'
+    compile 'com.google.android.gms:play-services:7.3.0'
+    compile project(':enterlib_support-release')
+    compile project(':enterlib-release')
+}

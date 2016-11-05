@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout 	
+    xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+	android:layout_height="match_parent"
+	android:orientation="vertical"	
+	android:paddingBottom="@dimen/content_padding_bottom" 
+	android:tag="{Value:Item}"
+	android:background="#ffffffff" >
+    
+    <ImageView
+        android:id="@+id/entityImage"
+        android:layout_width="match_parent"
+        android:layout_height="250dp"
+        android:layout_alignParentTop="true"
+        android:scaleType="centerCrop"
+        android:src="@drawable/sample_image"
+        android:tag="{Value:Image}"
+        android:layout_weight="1" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <TextView
+            android:id="@+id/name"
+            style="@style/content_text"
+            android:tag="{Value:Name}"
+            android:text="Fried Chiken Wins"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:layout_alignParentLeft="true"
+            android:layout_toLeftOf="@+id/currency" />
+
+         <TextView
+            android:id="@+id/currency"
+            style="@style/content_text"            
+            android:layout_centerVertical="true"           
+            android:text="$"
+            android:layout_toLeftOf="@+id/price"
+            android:textAppearance="?android:attr/textAppearanceMedium" />
+         
+        <TextView
+            android:id="@+id/price"
+            style="@style/content_text"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:tag="{Value:Price, Converter:CurrencyConverter}"
+            android:text="10.99"
+            android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    </RelativeLayout>
+    
+   
+     <View android:background="@drawable/loginbar" 
+         	android:layout_width="fill_parent" 
+         	android:layout_height="4.0dip"         	
+        	android:layout_marginTop="@dimen/content_margin_top"
+        	android:layout_marginBottom="@dimen/content_margin_top"/>
+    
+   	<TextView 
+			android:id="@+id/entityid"
+			android:tag="{Value:EntityName, ClickCommand:NavigateToEntity}" 
+			style="@style/content_nav"
+			android:layout_width="match_parent"
+			android:text="Metro Caffe" />
+
+</LinearLayout>

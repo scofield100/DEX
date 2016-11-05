@@ -1,0 +1,523 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.delivery2go"
+    android:installLocation="auto"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk
+        android:minSdkVersion="16"
+        android:targetSdkVersion="23" />
+
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="com.google.android.providers.gsf.permission.READ_GSERVICES" />
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+
+    <!-- Maps API needs OpenGL ES 2.0. -->
+    <uses-feature
+        android:glEsVersion="0x00020000"
+        android:required="true" />
+
+    <application
+        android:name=".DeliveryApp"
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+
+        <!-- <uses-library android:name="com.google.android.maps"/> -->
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
+        <meta-data
+            android:name="com.google.android.maps.v2.API_KEY"
+            android:value="AIzaSyDwldnNv2Bx-JEL4n2Akm_AuqVnc7z2Nu0" />
+
+        <activity
+            android:name=".home.MainActivity"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".home.AboutActivity"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="com.delivery2go.ABOUT" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".home.ActivitySearchEntities"
+            android:label="@string/app_name" >
+        </activity>
+        <activity
+            android:name=".entity.ActivityEntityWelcome"
+            android:label="@string/activityentitycategorylist" >
+        </activity>
+        <activity
+            android:name=".console.ActivityClientDetails"
+            android:label="@string/client_details" >
+        </activity>
+
+        <!-- <activity android:name=".ActivityDishView" -->
+        <!-- android:label="" -->
+        <!-- android:theme="@android:style/Theme.Holo.Light.Dialog.NoActionBar"> -->
+
+
+        <!-- </activity> -->
+
+        <activity
+            android:name=".entity.ActivityOrderDish"
+            android:label=""
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Holo.Light.Dialog.NoActionBar" >
+        </activity>
+        <activity
+            android:name=".order.ActivityOrderDetails"
+            android:label="@string/order_details" >
+        </activity>
+
+        <!-- Pay Pal -->
+        <activity
+            android:name="com.paypal.android.MEP.PayPalActivity"
+            android:configChanges="keyboardHidden|orientation"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+
+        <activity
+            android:name=".order.ActivityWebPayment"
+            android:label="@string/title_activity_activity_web_payment"
+            android:theme="@android:style/Theme.Holo.Light.Dialog.NoActionBar" >
+        </activity>
+
+        <!-- Administration Console -->
+        <activity
+            android:name=".console.ActivityLogIn"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="com.delivery2go.login" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".console.ActivityRegisterUser"
+            android:label="@string/register_user" >
+        </activity>
+        <activity
+            android:name=".console.ActivityDashboard"
+            android:label="@string/app_name" >
+        </activity>
+        <activity
+            android:name="com.enterlib.support.ActivityPickFile"
+            android:label="@string/select_picture" >
+        </activity>
+        <activity
+            android:name=".base.dishreview.ActivityDishReviewEdit"
+            android:label=""
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Holo.Light.Dialog.NoActionBar" >
+        </activity>
+        <activity
+            android:name=".base.entityreview.ActivityEntityReviewEdit"
+            android:label=""
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Holo.Light.Dialog.NoActionBar" >
+        </activity>
+        <activity
+            android:name=".SettingsActivity"
+            android:label="@string/title_activity_settings"
+            android:parentActivityName=".home.MainActivity" >
+
+        </activity>
+        <activity
+            android:name=".base.user.ActivityCurrentUserDetails"
+            android:label="@string/user_details" >
+        </activity>
+
+        <!-- START AUTOGENERATED -->
+        <activity
+            android:name=".base.dashboard.ActivityDashboard"
+            android:label="@string/app_name" >
+        </activity>
+
+        <!-- EntityCategory -->
+        <activity
+            android:name=".base.entitycategory.ActivityEntityCategoryList"
+            android:label="@string/activityentitycategorylist" >
+        </activity>
+        <activity
+            android:name=".base.entitycategory.ActivityEntityCategoryDetails"
+            android:label="@string/activityentitycategorydetails" >
+        </activity>
+        <activity
+            android:name=".base.entitycategory.ActivityEntityCategoryEdit"
+            android:label="@string/activityentitycategoryedit" >
+        </activity>
+
+        <!-- State -->
+        <activity
+            android:name=".base.state.ActivityStateList"
+            android:label="@string/activitystatelist" >
+        </activity>
+        <activity
+            android:name=".base.state.ActivityStateDetails"
+            android:label="@string/activitystatedetails" >
+        </activity>
+        <activity
+            android:name=".base.state.ActivityStateEdit"
+            android:label="@string/activitystateedit" >
+        </activity>
+
+        <!-- EntityImages -->
+        <activity
+            android:name=".base.entityimages.ActivityEntityImagesList"
+            android:label="@string/activityentityimageslist" >
+        </activity>
+        <activity
+            android:name=".base.entityimages.ActivityEntityImagesDetails"
+            android:label="@string/activityentityimagesdetails" >
+        </activity>
+        <activity
+            android:name=".base.entityimages.ActivityEntityImagesEdit"
+            android:label="@string/activityentityimagesedit" >
+        </activity>
+
+        <!-- EntityCategories -->
+        <activity
+            android:name=".base.entitycategories.ActivityEntityCategoriesList"
+            android:label="@string/activityentitycategorieslist" >
+        </activity>
+        <activity
+            android:name=".base.entitycategories.ActivityEntityCategoriesDetails"
+            android:label="@string/activityentitycategoriesdetails" >
+        </activity>
+        <activity
+            android:name=".base.entitycategories.ActivityEntityCategoriesEdit"
+            android:label="@string/activityentitycategoriesedit" >
+        </activity>
+
+        <!-- DishCategories -->
+        <activity
+            android:name=".base.dishcategories.ActivityDishCategoriesList"
+            android:label="@string/activitydishcategorieslist" >
+        </activity>
+        <activity
+            android:name=".base.dishcategories.ActivityDishCategoriesDetails"
+            android:label="@string/activitydishcategoriesdetails" >
+        </activity>
+        <activity
+            android:name=".base.dishcategories.ActivityDishCategoriesEdit"
+            android:label="@string/activitydishcategoriesedit" >
+        </activity>
+
+        <!-- DishImages -->
+        <activity
+            android:name=".base.dishimages.ActivityDishImagesList"
+            android:label="@string/activitydishimageslist" >
+        </activity>
+        <activity
+            android:name=".base.dishimages.ActivityDishImagesDetails"
+            android:label="@string/activitydishimagesdetails" >
+        </activity>
+        <activity
+            android:name=".base.dishimages.ActivityDishImagesEdit"
+            android:label="@string/activitydishimagesedit" >
+        </activity>
+
+        <!-- City -->
+        <activity
+            android:name=".base.city.ActivityCityList"
+            android:label="@string/activitycitylist" >
+        </activity>
+        <activity
+            android:name=".base.city.ActivityCityDetails"
+            android:label="@string/activitycitydetails" >
+        </activity>
+        <activity
+            android:name=".base.city.ActivityCityEdit"
+            android:label="@string/activitycityedit" >
+        </activity>
+
+        <!-- ClientDishFavorites -->
+        <activity
+            android:name=".base.clientdishfavorites.ActivityClientDishFavoritesList"
+            android:label="@string/activityclientdishfavoriteslist" >
+        </activity>
+        <activity
+            android:name=".base.clientdishfavorites.ActivityClientDishFavoritesDetails"
+            android:label="@string/activityclientdishfavoritesdetails" >
+        </activity>
+        <activity
+            android:name=".base.clientdishfavorites.ActivityClientDishFavoritesEdit"
+            android:label="@string/activityclientdishfavoritesedit" >
+        </activity>
+
+        <!-- ClientEntityFavorites -->
+        <activity
+            android:name=".base.cliententityfavorites.ActivityClientEntityFavoritesList"
+            android:label="@string/activitycliententityfavoriteslist" >
+        </activity>
+        <activity
+            android:name=".base.cliententityfavorites.ActivityClientEntityFavoritesDetails"
+            android:label="@string/activitycliententityfavoritesdetails" >
+        </activity>
+        <activity
+            android:name=".base.cliententityfavorites.ActivityClientEntityFavoritesEdit"
+            android:label="@string/activitycliententityfavoritesedit" >
+        </activity>
+
+        <!-- Client -->
+        <activity
+            android:name=".base.client.ActivityClientList"
+            android:label="@string/activityclientlist" >
+        </activity>
+        <activity
+            android:name=".base.client.ActivityClientDetails"
+            android:label="@string/activityclientdetails" >
+        </activity>
+        <activity
+            android:name=".base.client.ActivityClientEdit"
+            android:label="@string/activityclientedit" >
+        </activity>
+
+        <!-- OrderState -->
+        <activity
+            android:name=".base.orderstate.ActivityOrderStateList"
+            android:label="@string/activityorderstatelist" >
+        </activity>
+        <activity
+            android:name=".base.orderstate.ActivityOrderStateDetails"
+            android:label="@string/activityorderstatedetails" >
+        </activity>
+        <activity
+            android:name=".base.orderstate.ActivityOrderStateEdit"
+            android:label="@string/activityorderstateedit" >
+        </activity>
+
+        <!-- OrderType -->
+        <activity
+            android:name=".base.ordertype.ActivityOrderTypeList"
+            android:label="@string/activityordertypelist" >
+        </activity>
+        <activity
+            android:name=".base.ordertype.ActivityOrderTypeDetails"
+            android:label="@string/activityordertypedetails" >
+        </activity>
+        <activity
+            android:name=".base.ordertype.ActivityOrderTypeEdit"
+            android:label="@string/activityordertypeedit" >
+        </activity>
+
+        <!-- DishSize -->
+        <activity
+            android:name=".base.dishsize.ActivityDishSizeList"
+            android:label="@string/activitydishsizelist" >
+        </activity>
+        <activity
+            android:name=".base.dishsize.ActivityDishSizeDetails"
+            android:label="@string/activitydishsizedetails" >
+        </activity>
+        <activity
+            android:name=".base.dishsize.ActivityDishSizeEdit"
+            android:label="@string/activitydishsizeedit" >
+        </activity>
+
+        <!-- User -->
+        <activity
+            android:name=".base.user.ActivityUserList"
+            android:label="@string/activityuserlist" >
+        </activity>
+        <activity
+            android:name=".base.user.ActivityUserDetails"
+            android:label="@string/activityuserdetails" >
+        </activity>
+        <activity
+            android:name=".base.user.ActivityUserEdit"
+            android:label="@string/activityuseredit" >
+        </activity>
+
+        <!-- Roll -->
+        <activity
+            android:name=".base.roll.ActivityRollList"
+            android:label="@string/activityrolllist" >
+        </activity>
+        <activity
+            android:name=".base.roll.ActivityRollDetails"
+            android:label="@string/activityrolldetails" >
+        </activity>
+        <activity
+            android:name=".base.roll.ActivityRollEdit"
+            android:label="@string/activityrolledit" >
+        </activity>
+
+        <!-- Permission -->
+        <activity
+            android:name=".base.permission.ActivityPermissionList"
+            android:label="@string/activitypermissionlist" >
+        </activity>
+        <activity
+            android:name=".base.permission.ActivityPermissionDetails"
+            android:label="@string/activitypermissiondetails" >
+        </activity>
+        <activity
+            android:name=".base.permission.ActivityPermissionEdit"
+            android:label="@string/activitypermissionedit" >
+        </activity>
+
+        <!-- Entity -->
+        <activity
+            android:name=".base.entity.ActivityEntityList"
+            android:label="@string/activityentitylist" >
+        </activity>
+        <activity
+            android:name=".base.entity.ActivityEntityDetails"
+            android:label="@string/activityentitydetails" >
+        </activity>
+        <activity
+            android:name=".base.entity.ActivityEntityEdit"
+            android:label="@string/activityentityedit" >
+        </activity>
+
+        <!-- Addons -->
+        <activity
+            android:name=".base.addons.ActivityAddonsList"
+            android:label="@string/activityaddonslist" >
+        </activity>
+        <activity
+            android:name=".base.addons.ActivityAddonsDetails"
+            android:label="@string/activityaddonsdetails" >
+        </activity>
+        <activity
+            android:name=".base.addons.ActivityAddonsEdit"
+            android:label="@string/activityaddonsedit" >
+        </activity>
+
+        <!-- Dish -->
+        <activity
+            android:name=".base.dish.ActivityDishList"
+            android:label="@string/activitydishlist" >
+        </activity>
+        <activity
+            android:name=".base.dish.ActivityDishDetails"
+            android:label="@string/activitydishdetails" >
+        </activity>
+        <activity
+            android:name=".base.dish.ActivityDishEdit"
+            android:label="@string/activitydishedit" >
+        </activity>
+
+        <!-- DishCategory -->
+        <activity
+            android:name=".base.dishcategory.ActivityDishCategoryList"
+            android:label="@string/activitydishcategorylist" >
+        </activity>
+        <activity
+            android:name=".base.dishcategory.ActivityDishCategoryDetails"
+            android:label="@string/activitydishcategorydetails" >
+        </activity>
+        <activity
+            android:name=".base.dishcategory.ActivityDishCategoryEdit"
+            android:label="@string/activitydishcategoryedit" >
+        </activity>
+
+        <!-- DishSizePrice -->
+        <activity
+            android:name=".base.dishsizeprice.ActivityDishSizePriceList"
+            android:label="@string/activitydishsizepricelist" >
+        </activity>
+        <activity
+            android:name=".base.dishsizeprice.ActivityDishSizePriceDetails"
+            android:label="@string/activitydishsizepricedetails" >
+        </activity>
+        <activity
+            android:name=".base.dishsizeprice.ActivityDishSizePriceEdit"
+            android:label="@string/activitydishsizepriceedit" >
+        </activity>
+
+        <!-- EntityMenu -->
+        <activity
+            android:name=".base.entitymenu.ActivityEntityMenuList"
+            android:label="@string/activityentitymenulist" >
+        </activity>
+        <activity
+            android:name=".base.entitymenu.ActivityEntityMenuDetails"
+            android:label="@string/activityentitymenudetails" >
+        </activity>
+        <activity
+            android:name=".base.entitymenu.ActivityEntityMenuEdit"
+            android:label="@string/activityentitymenuedit" >
+        </activity>
+
+        <!-- Image -->
+        <activity
+            android:name=".base.image.ActivityImageList"
+            android:label="@string/activityimagelist" >
+        </activity>
+        <activity
+            android:name=".base.image.ActivityImageDetails"
+            android:label="@string/activityimagedetails" >
+        </activity>
+        <activity
+            android:name=".base.image.ActivityImageEdit"
+            android:label="@string/activityimageedit" >
+        </activity>
+
+        <!-- Order -->
+        <activity
+            android:name=".base.order.ActivityOrderList"
+            android:label="@string/activityorderlist" >
+        </activity>
+        <activity
+            android:name=".base.order.ActivityOrderDetails"
+            android:label="@string/activityorderdetails" >
+        </activity>
+        <activity
+            android:name=".base.order.ActivityOrderEdit"
+            android:label="@string/activityorderedit" >
+        </activity>
+
+        <!-- OrderDish -->
+        <activity
+            android:name=".base.orderdish.ActivityOrderDishList"
+            android:label="@string/activityorderdishlist" >
+        </activity>
+        <activity
+            android:name=".base.orderdish.ActivityOrderDishDetails"
+            android:label="@string/activityorderdishdetails" >
+        </activity>
+        <activity
+            android:name=".base.orderdish.ActivityOrderDishEdit"
+            android:label="@string/activityorderdishedit" >
+        </activity>
+
+        <!-- OrderDishAddons -->
+        <activity
+            android:name=".base.orderdishaddons.ActivityOrderDishAddonsList"
+            android:label="@string/activityorderdishaddonslist" >
+        </activity>
+        <activity
+            android:name=".base.orderdishaddons.ActivityOrderDishAddonsDetails"
+            android:label="@string/activityorderdishaddonsdetails" >
+        </activity>
+        <activity
+            android:name=".base.orderdishaddons.ActivityOrderDishAddonsEdit"
+            android:label="@string/activityorderdishaddonsedit" >
+        </activity>
+        <!-- END AUTO GENERATED -->
+
+
+    </application>
+
+</manifest>

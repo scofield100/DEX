@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!-- EntityName -->
+    <TextView
+        android:id="@+id/entityName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:tag="{Value:EntityName}"
+        android:singleLine="true"
+        android:ellipsize="end"
+        android:text="Dino&apos;s Pizza"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+
+    <!-- Code -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            style="@style/content_label"
+            android:text="@string/lb_code" />
+
+        <TextView
+            android:id="@+id/code"
+            android:tag="{Value:OrderId}"
+            android:layout_weight="1"
+            style="@style/content_text"
+            android:text="1500000"
+            />
+
+        <TextView
+            android:id="@+id/createdate"
+            android:tag="{Value:CreateDate, Converter:DateConverter}"
+            android:text="28/08/2016 09:56"
+            style="@style/content_text"
+            android:textSize="12sp"
+            android:textColor="@color/text_secondary"
+            />
+
+    </LinearLayout>
+
+
+
+    <!-- TotalAmount -->
+
+    <LinearLayout
+        android:layout_marginTop="@dimen/content_margin_top"
+        style="@style/content_panel"  >
+        <TextView
+            style="@style/content_label"
+            android:text="@string/lb_totalamount" />
+
+        <TextView
+            android:id="@+id/totalamount"
+            android:tag="{Value:TotalPayment, Converter:CurrencyConverter}"
+            style="@style/content_text"
+            />
+        </LinearLayout>
+
+    <!-- OrderStateId -->
+
+    <LinearLayout
+        android:layout_marginTop="@dimen/content_margin_top"
+        style="@style/content_panel"  >
+        <TextView
+            style="@style/content_label"
+            android:text="@string/lb_orderstatename" />
+
+        <TextView
+            android:id="@+id/orderstateid"
+            android:tag="{Value:OrderStateName, BackgroundColor:{Source:OrderStateId, Converter:StateToColorConverter}}"
+            style="@style/content_text"
+            android:layout_gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            />
+
+    </LinearLayout>
+
+    <!-- OrderTypeId -->
+
+    <LinearLayout
+        android:layout_marginTop="@dimen/content_margin_top"
+        style="@style/content_panel"  >
+        <TextView
+            style="@style/content_label"
+            android:text="@string/lb_ordertypename" />
+
+        <TextView
+            android:id="@+id/ordertypeid"
+            android:tag="{Value:OrderTypeName}"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content" />
+    </LinearLayout>
+
+    <!-- DeliveryTimeMinutes -->
+
+    <LinearLayout
+        android:layout_marginTop="@dimen/content_margin_top"
+        style="@style/content_panel"  >
+        <TextView
+            style="@style/content_label"
+            android:text="@string/lb_deliverytimeminutes" />
+
+        <TextView
+            android:id="@+id/deliverytimeminutes"
+            android:tag="{Value:DeliveryTimeMinutes, Converter:MinutesConverter}"
+            style="@style/content_text"
+            />
+    </LinearLayout>
+
+</LinearLayout>

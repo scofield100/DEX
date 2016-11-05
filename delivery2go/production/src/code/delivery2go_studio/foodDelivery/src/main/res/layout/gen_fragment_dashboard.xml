@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout          
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical" >
+        
+
+<ListView   
+    
+    android:id="@+id/listView"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"    
+    android:layout_marginBottom="@dimen/list_margin_bottom"     
+    android:dividerHeight="1dp"    
+    android:choiceMode="singleChoice"
+    android:fastScrollEnabled="true"    
+    android:tag="{ Value:Items, ItemTemplate:gen_adapter_dashboard_item, ItemClickCommand:Selection}"    
+     />           
+
+</LinearLayout>
+

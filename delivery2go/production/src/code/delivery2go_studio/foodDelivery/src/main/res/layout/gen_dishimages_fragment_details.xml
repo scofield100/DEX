@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView  xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:tools="http://schemas.android.com/tools"
+	android:layout_width="fill_parent"
+	android:layout_height="fill_parent">
+<LinearLayout 	android:layout_width="match_parent"
+	android:layout_height="match_parent"
+	android:orientation="vertical"
+	android:paddingTop="@dimen/content_padding_top"
+	android:paddingBottom="@dimen/content_padding_bottom" 
+	android:tag="{Value:Item}" >
+
+	<!-- DishId -->
+
+	<LinearLayout 
+		style="@style/content_panel"  >
+		<TextView 
+			style="@style/content_label" 
+			android:text="@string/lb_dishname" />
+
+		<TextView 
+			android:id="@+id/dishid"
+			android:tag="{Value:DishName,ClickCommand:NavigateToDish}" 
+			style="@style/content_nav" 
+/>
+
+	</LinearLayout>
+
+	<!-- ImageId -->
+
+	<LinearLayout 
+		android:layout_marginTop="@dimen/content_margin_top"
+		style="@style/content_panel"  >
+		<TextView 
+			style="@style/content_label" 
+			android:text="@string/lb_imagelocation" />
+
+		<TextView 
+			android:id="@+id/imageid"
+			android:tag="{Value:ImageLocation,ClickCommand:NavigateToImage}" 
+			style="@style/content_nav" 
+/>
+
+	</LinearLayout>
+</LinearLayout>
+</ScrollView>

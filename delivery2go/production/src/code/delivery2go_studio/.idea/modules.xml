@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/delivery2go_studio.iml" filepath="$PROJECT_DIR$/delivery2go_studio.iml" />
+      <module fileurl="file://$PROJECT_DIR$/enterlib/enterlib.iml" filepath="$PROJECT_DIR$/enterlib/enterlib.iml" />
+      <module fileurl="file://$PROJECT_DIR$/enterlib-release/enterlib-release.iml" filepath="$PROJECT_DIR$/enterlib-release/enterlib-release.iml" />
+      <module fileurl="file://$PROJECT_DIR$/enterlib_support/enterlib_support.iml" filepath="$PROJECT_DIR$/enterlib_support/enterlib_support.iml" />
+      <module fileurl="file://$PROJECT_DIR$/enterlib_support-release/enterlib_support-release.iml" filepath="$PROJECT_DIR$/enterlib_support-release/enterlib_support-release.iml" />
+      <module fileurl="file://$PROJECT_DIR$/foodDelivery/foodDelivery.iml" filepath="$PROJECT_DIR$/foodDelivery/foodDelivery.iml" />
+    </modules>
+  </component>
+</project>

@@ -1,0 +1,438 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView  xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:tools="http://schemas.android.com/tools"
+	android:layout_width="fill_parent"
+	android:layout_height="fill_parent"
+	 >
+
+<LinearLayout 	android:layout_width="match_parent"
+	android:layout_height="match_parent"
+	android:orientation="vertical"
+	android:paddingLeft="@dimen/activity_horizontal_margin"
+	android:paddingRight="@dimen/activity_horizontal_margin"
+	android:paddingTop="@dimen/activity_vertical_margin"
+	android:paddingBottom="@dimen/activity_vertical_margin"
+	android:tag="{Value:Item}" >
+
+	<!-- Name -->
+
+	<LinearLayout style="@style/content_edit_panel"  >
+		<TextView 
+			style="@style/content_label" 
+			android:text="@string/name" />
+
+		<EditText 
+			android:id="@+id/name"
+			style="@style/content_text_edit"
+            android:hint="@string/required"
+			android:tag="{Value:Name, Required:true, Label:name}" android:inputType="textPersonName"  />
+
+	</LinearLayout>
+
+    <!-- Tags -->
+
+    <LinearLayout android:layout_marginTop="@dimen/content_margin_top"
+        style="@style/content_edit_panel"  >
+        <TextView
+            style="@style/content_label"
+            android:text="@string/tags" />
+
+        <EditText
+            android:id="@+id/tags"
+            style="@style/content_text_edit"
+            android:tag="{Value:Tags, Label:tags}" android:inputType="text"  />
+
+    </LinearLayout>
+
+
+    <!-- ImageId -->
+
+	<LinearLayout android:layout_marginTop="@dimen/content_margin_top" 
+				style="@style/content_edit_panel"  >
+		<TextView 
+			style="@style/content_label" 
+			android:text="@string/imageid" />
+
+		<Spinner 
+			android:id="@+id/imageid"
+			style="@style/content_spinner" 
+			android:tag="{Value:ImageId, Items:ImagesOptional, Comparer:ImageComparer, Key:Id, Label:imageid, ItemTemplate:spinner_image_adapter}" />
+
+	</LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:background="@drawable/white_round_rect"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Location"
+            android:textColor="@color/text_secondary" />
+	<!-- Adress -->
+
+	<LinearLayout android:layout_marginTop="@dimen/content_margin_top" 
+style="@style/content_edit_panel"  >
+		<TextView 
+			style="@style/content_label" 
+			android:text="@string/adress" />
+
+		<EditText 
+			android:id="@+id/adress"
+			style="@style/content_text_edit" 
+			android:tag="{Value:Adress, Label:adress}" android:maxLines="2" android:minLines="2" android:inputType="textMultiLine"  />
+
+	</LinearLayout>
+
+	<!-- CityId -->
+
+	<LinearLayout android:layout_marginTop="@dimen/content_margin_top" 
+style="@style/content_edit_panel"  >
+		<TextView 
+			style="@style/content_label" 
+			android:text="@string/cityid" />
+
+		<Spinner 
+			android:id="@+id/cityid"
+			style="@style/content_spinner" 
+			android:tag="{Value:CityId, Items:CitiesOptional, Comparer:CityComparer, Key:Id, Label:cityid}" /> 
+
+	</LinearLayout>
+
+	<!-- StateId -->
+
+	<LinearLayout android:layout_marginTop="@dimen/content_margin_top" 
+style="@style/content_edit_panel"  >
+		<TextView 
+			style="@style/content_label" 
+			android:text="@string/stateid" />
+
+		<Spinner 
+			android:id="@+id/stateid"
+			style="@style/content_spinner" 
+			android:tag="{Value:StateId, Items:StatesOptional, Comparer:StateComparer, Key:Id, Label:stateid}" /> 
+
+	</LinearLayout>
+
+    </LinearLayout>
+
+	<LinearLayout
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:orientation="vertical"
+		android:padding="10dp"
+        android:layout_marginTop="@dimen/content_margin_top"
+		android:background="@drawable/white_round_rect">
+		<TextView
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:text="Map Location"
+            android:textColor="@color/text_secondary"/>
+	<!-- Lat -->
+
+	<LinearLayout android:layout_marginTop="@dimen/content_margin_top" 
+		style="@style/content_edit_panel"  >
+		<TextView 
+			style="@style/content_label" 
+			android:text="@string/lat" />
+
+		<EditText 
+			android:id="@+id/lat"
+			style="@style/content_text_edit" 
+			android:tag="{Value:Lat, Converter:DoubleConverterNullable, Label:lat}"
+			android:inputType="numberDecimal|numberSigned"  />
+
+	</LinearLayout>
+
+	<!-- Lng -->
+
+	<LinearLayout android:layout_marginTop="@dimen/content_margin_top" 
+		style="@style/content_edit_panel"  >
+		<TextView 
+			style="@style/content_label" 
+			android:text="@string/lng" />
+
+		<EditText 
+			android:id="@+id/lng"
+			style="@style/content_text_edit" 
+			android:tag="{Value:Lng, Converter:DoubleConverterNullable, Label:lng}"
+			android:inputType="numberDecimal|numberSigned" />
+
+	</LinearLayout>
+
+	</LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="10dp"
+        android:layout_marginTop="@dimen/content_margin_top"
+        android:background="@drawable/white_round_rect">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Contact Info"
+            android:textColor="@color/text_secondary"/>
+
+	<!-- Phone -->
+
+	<LinearLayout android:layout_marginTop="@dimen/content_margin_top" 
+style="@style/content_edit_panel"  >
+		<TextView 
+			style="@style/content_label" 
+			android:text="@string/phone" />
+
+		<EditText 
+			android:id="@+id/phone"
+			style="@style/content_text_edit" 
+			android:tag="{Value:Phone, Label:phone}" android:inputType="phone"  />
+
+	</LinearLayout>
+
+	<!-- Email -->
+
+	<LinearLayout android:layout_marginTop="@dimen/content_margin_top" style="@style/content_edit_panel"  >
+		<TextView 
+			style="@style/content_label" 
+			android:text="@string/email" />
+
+		<EditText 
+			android:id="@+id/email"
+			style="@style/content_text_edit" 
+			android:tag="{Value:Email, Email:true, Label:email}" android:inputType="textEmailAddress"  />
+
+	</LinearLayout>
+
+
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="10dp"
+        android:layout_marginTop="@dimen/content_margin_top"
+        android:background="@drawable/white_round_rect">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Disponibility Info"
+            android:textColor="@color/text_secondary"/>
+	<!-- OpeningTime -->
+
+	<LinearLayout android:layout_marginTop="@dimen/content_margin_top" 
+                    android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+		<TextView 
+			style="@style/content_label" 
+			android:text="@string/lb_openingtime" />
+
+		<com.enterlib.widgets.TimePickerButton
+            android:layout_marginLeft="@dimen/content_margin_left"
+			android:id="@+id/openingtime"
+			style="@style/content_date"
+            android:hint="@string/required"
+			android:tag="{Value:OpeningTime, Required:true, Label:openingtime}" />
+	</LinearLayout>
+
+	<!-- CloseTime -->
+
+	<LinearLayout android:layout_marginTop="@dimen/content_margin_top"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" >
+		<TextView 
+			style="@style/content_label" 
+			android:text="@string/lb_closetime" />
+
+		<com.enterlib.widgets.TimePickerButton
+            android:layout_marginLeft="@dimen/content_margin_left"
+            android:hint="@string/required"
+			android:id="@+id/closetime"
+			style="@style/content_date" 
+			android:tag="{Value:CloseTime, Required:true, Label:closetime}" />
+	</LinearLayout>
+
+        <!-- IsAvailable -->
+
+        <LinearLayout android:layout_marginTop="@dimen/content_margin_top"
+            style="@style/content_edit_panel"  >
+
+            <CheckBox
+                android:id="@+id/isavailable"
+                style="@style/content_checkbox"
+                android:text="@string/isavailable"
+                android:tag="{Value:IsAvailable, Label:isavailable}"/>
+
+        </LinearLayout>
+
+        <!-- HasDelivery -->
+
+        <LinearLayout android:layout_marginTop="@dimen/content_margin_top"
+            style="@style/content_edit_panel"  >
+
+            <CheckBox
+                android:id="@+id/hasdelivery"
+                style="@style/content_checkbox"
+                android:text="@string/hasdelivery"
+                android:tag="{Value:HasDelivery, Label:hasdelivery}"/>
+
+        </LinearLayout>
+
+        <!-- HasPickup -->
+
+        <LinearLayout android:layout_marginTop="@dimen/content_margin_top"
+            style="@style/content_edit_panel"  >
+
+            <CheckBox
+                android:id="@+id/haspickup"
+                style="@style/content_checkbox"
+                android:text="@string/haspickup"
+                android:tag="{Value:HasPickup, Label:haspickup}"/>
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="10dp"
+        android:layout_marginTop="@dimen/content_margin_top"
+        android:background="@drawable/white_round_rect">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Delivery"
+            android:textColor="@color/text_secondary"/>
+
+	<!-- DeliveryPrice -->
+
+	<LinearLayout android:layout_marginTop="@dimen/content_margin_top" 
+style="@style/content_edit_panel"  >
+		<TextView 
+			style="@style/content_label" 
+			android:text="@string/deliveryprice" />
+
+		<EditText 
+			android:id="@+id/deliveryprice"
+			style="@style/content_text_edit" 
+			android:tag="{Value:DeliveryPrice, Converter:DoubleConverterNullable, Label:deliveryprice}" android:inputType="numberDecimal"  />
+
+	</LinearLayout>
+
+	<!-- DeliveryTimeMin -->
+
+	<LinearLayout android:layout_marginTop="@dimen/content_margin_top" 
+style="@style/content_edit_panel"  >
+		<TextView 
+			style="@style/content_label" 
+			android:text="@string/deliverytimemin" />
+
+		<EditText 
+			android:id="@+id/deliverytimemin"
+			style="@style/content_text_edit" 
+			android:tag="{Value:DeliveryTimeMin, Converter:DoubleConverterNullable, Label:deliverytimemin}" android:inputType="numberDecimal"  />
+
+	</LinearLayout>
+
+	<!-- DeliveryTimeMax -->
+
+	<LinearLayout android:layout_marginTop="@dimen/content_margin_top" 
+style="@style/content_edit_panel"  >
+		<TextView 
+			style="@style/content_label" 
+			android:text="@string/deliverytimemax" />
+
+		<EditText 
+			android:id="@+id/deliverytimemax"
+			style="@style/content_text_edit" 
+			android:tag="{Value:DeliveryTimeMax, Converter:DoubleConverterNullable, Label:deliverytimemax}" android:inputType="numberDecimal"  />
+
+	</LinearLayout>
+
+        </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="10dp"
+        android:layout_marginTop="@dimen/content_margin_top"
+        android:background="@drawable/white_round_rect">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Pricing"
+            android:textColor="@color/text_secondary"/>
+	<!-- MinPrice -->
+
+	<LinearLayout android:layout_marginTop="@dimen/content_margin_top" 
+style="@style/content_edit_panel"  >
+		<TextView 
+			style="@style/content_label" 
+			android:text="@string/minprice" />
+
+		<EditText 
+			android:id="@+id/minprice"
+			style="@style/content_text_edit" 
+			android:tag="{Value:MinPrice, Converter:DoubleConverterNullable, Label:minprice}" android:inputType="numberDecimal"  />
+
+	</LinearLayout>
+    </LinearLayout>
+
+
+    <!--<LinearLayout-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:orientation="vertical"-->
+        <!--android:padding="10dp"-->
+        <!--android:layout_marginTop="@dimen/content_margin_top"-->
+        <!--android:background="@drawable/white_round_rect">-->
+        <!--<TextView-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:text="Enter your Paypal account"-->
+            <!--android:textColor="@color/text_secondary"/>-->
+	<!--&lt;!&ndash; Account &ndash;&gt;-->
+
+	<!--<LinearLayout android:layout_marginTop="@dimen/content_margin_top" -->
+        <!--style="@style/content_edit_panel"  >-->
+		<!--<TextView -->
+			<!--style="@style/content_label" -->
+			<!--android:text="@string/account" />-->
+
+		<!--<EditText -->
+			<!--android:id="@+id/account"-->
+			<!--style="@style/content_text_edit" -->
+			<!--android:tag="{Value:Account, Label:account}" android:inputType="text"  />-->
+
+	<!--</LinearLayout>-->
+    <!--</LinearLayout>-->
+
+    <!-- Description -->
+
+    <LinearLayout android:layout_marginTop="@dimen/content_margin_top"
+        style="@style/content_edit_panel"  >
+        <TextView
+            style="@style/content_label"
+            android:text="@string/description" />
+
+        <EditText
+            android:id="@+id/description"
+            style="@style/content_text_edit"
+            android:tag="{Value:Description, Label:description}" android:maxLines="3" android:minLines="3" android:inputType="textMultiLine"  />
+
+    </LinearLayout>
+
+</LinearLayout>
+</ScrollView>

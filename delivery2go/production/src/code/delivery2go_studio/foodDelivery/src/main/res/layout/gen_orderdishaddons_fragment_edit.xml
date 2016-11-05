@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView  xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:tools="http://schemas.android.com/tools"
+	android:layout_width="fill_parent"
+	android:layout_height="fill_parent">
+<LinearLayout 	android:layout_width="match_parent"
+	android:layout_height="match_parent"
+	android:orientation="vertical"
+	android:paddingTop="@dimen/content_padding_top"
+	android:paddingBottom="@dimen/content_padding_bottom"
+	android:tag="{Value:Item}" >
+
+	<!-- OrderDishId -->
+
+	<LinearLayout style="@style/content_edit_panel"  >
+		<TextView 
+			style="@style/content_label" 
+			android:text="@string/orderdishid" />
+
+		<Spinner 
+			android:id="@+id/orderdishid"
+			style="@style/content_spinner" 
+			android:tag="{Value:OrderDishId, Items:OrderDishs, Comparer:OrderDishComparer, Key:Id, Required:true, Label:orderdishid}" /> 
+
+	</LinearLayout>
+
+	<!-- AddonId -->
+
+	<LinearLayout android:layout_marginTop="@dimen/content_margin_top" 
+style="@style/content_edit_panel"  >
+		<TextView 
+			style="@style/content_label" 
+			android:text="@string/addonid" />
+
+		<Spinner 
+			android:id="@+id/addonid"
+			style="@style/content_spinner" 
+			android:tag="{Value:AddonId, Items:Addonses, Comparer:AddonsComparer, Key:Id, Required:true, Label:addonid}" /> 
+
+	</LinearLayout>
+
+	<!-- AddonPrice -->
+
+	<LinearLayout android:layout_marginTop="@dimen/content_margin_top" 
+style="@style/content_edit_panel"  >
+		<TextView 
+			style="@style/content_label" 
+			android:text="@string/addonprice" />
+
+		<EditText 
+			android:id="@+id/addonprice"
+			style="@style/content_text_edit" 
+			android:tag="{Value:AddonPrice, Converter:DoubleConverter, Required:true, Label:addonprice}" android:inputType="numberDecimal"  />
+
+	</LinearLayout>
+
+	<!-- Remarks -->
+
+	<LinearLayout android:layout_marginTop="@dimen/content_margin_top" 
+style="@style/content_edit_panel"  >
+		<TextView 
+			style="@style/content_label" 
+			android:text="@string/remarks" />
+
+		<EditText 
+			android:id="@+id/remarks"
+			style="@style/content_text_edit" 
+			android:tag="{Value:Remarks, Label:remarks}" android:inputType="text"  />
+
+	</LinearLayout>
+
+	<!-- UpdateUserId -->
+
+	<LinearLayout android:layout_marginTop="@dimen/content_margin_top" 
+style="@style/content_edit_panel"  >
+		<TextView 
+			style="@style/content_label" 
+			android:text="@string/updateuserid" />
+
+		<Spinner 
+			android:id="@+id/updateuserid"
+			style="@style/content_spinner" 
+			android:tag="{Value:UpdateUserId, Items:UsersOptional, Comparer:UserComparer, Key:Id, Label:updateuserid}" /> 
+
+	</LinearLayout>
+</LinearLayout>
+</ScrollView>

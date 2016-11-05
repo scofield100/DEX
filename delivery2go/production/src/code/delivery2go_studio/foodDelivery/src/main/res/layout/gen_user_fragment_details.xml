@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView  xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:tools="http://schemas.android.com/tools"
+	android:layout_width="fill_parent"
+	android:layout_height="fill_parent">
+<LinearLayout 	android:layout_width="match_parent"
+	android:layout_height="match_parent"
+	android:orientation="vertical"
+	android:paddingLeft="@dimen/activity_horizontal_margin"
+	android:paddingRight="@dimen/activity_horizontal_margin"
+	android:paddingTop="@dimen/activity_vertical_margin"
+	android:paddingBottom="@dimen/activity_vertical_margin"
+	android:tag="{Value:Item}" >
+
+	<!-- Name -->
+
+	<LinearLayout 
+		style="@style/content_panel"  >
+		<TextView 
+			style="@style/content_label" 
+			android:text="@string/lb_name" />
+
+		<TextView 
+			android:id="@+id/name"
+			android:tag="{Value:Name}" 
+			style="@style/content_text" 
+/>
+
+	</LinearLayout>
+
+	<!-- Username -->
+
+	<LinearLayout 
+		android:layout_marginTop="@dimen/content_margin_top"
+		style="@style/content_panel"
+		android:tag="{Visible:ShowUsername}" >
+		<TextView 
+			style="@style/content_label" 
+			android:text="@string/lb_username" />
+
+		<TextView 
+			android:id="@+id/username"
+			android:tag="{Value:Username}" 
+			style="@style/content_text" 
+/>
+
+	</LinearLayout>
+
+
+	<!-- Mobile -->
+
+	<LinearLayout 
+		android:layout_marginTop="@dimen/content_margin_top"
+		style="@style/content_panel"  >
+		<TextView 
+			style="@style/content_label" 
+			android:text="@string/lb_mobile" />
+
+		<TextView 
+			android:id="@+id/mobile"
+			android:tag="{Value:Mobile}" 
+			style="@style/content_text" 
+/>
+
+	</LinearLayout>
+
+	<!-- Phone -->
+
+	<LinearLayout 
+		android:layout_marginTop="@dimen/content_margin_top"
+		style="@style/content_panel"  >
+		<TextView 
+			style="@style/content_label" 
+			android:text="@string/lb_phone" />
+
+		<TextView 
+			android:id="@+id/phone"
+			android:tag="{Value:Phone}" 
+			style="@style/content_text" 
+/>
+
+	</LinearLayout>
+
+	<!-- Adress -->
+
+	<LinearLayout 
+		android:layout_marginTop="@dimen/content_margin_top"
+		style="@style/content_edit_panel"  >
+		<TextView 
+			style="@style/content_label" 
+			android:text="@string/lb_adress" />
+
+		<TextView 
+			android:id="@+id/adress"
+			android:tag="{Value:Adress}" 
+			style="@style/content_text" 
+/>
+
+	</LinearLayout>
+
+	<!-- IsActive -->
+
+	<CheckBox
+		android:id="@+id/isactive"
+		style="@style/content_checkbox"
+		android:text="@string/isactive"
+		android:clickable="false"
+		android:tag="{Value:IsActive}" />
+
+	<!-- Superadmin -->
+	<CheckBox
+		android:id="@+id/superadmin"
+		style="@style/content_checkbox"
+		android:clickable="false"
+		android:text="@string/superadmin"
+		android:tag="{Value:Superadmin}" />
+
+	<!-- CreateDate -->
+
+	<LinearLayout 
+		android:layout_marginTop="@dimen/content_margin_top"
+		style="@style/content_panel"  >
+		<TextView 
+			style="@style/content_label" 
+			android:text="@string/lb_createdate" />
+
+		<TextView 
+			android:id="@+id/createdate"
+			android:tag="{Value:CreateDate, Converter:DateConverter}" 
+			style="@style/content_text" 
+/>
+
+	</LinearLayout>
+
+	<!-- UpdateDate -->
+
+	<LinearLayout 
+		android:layout_marginTop="@dimen/content_margin_top"
+		style="@style/content_panel"  >
+		<TextView 
+			style="@style/content_label" 
+			android:text="@string/lb_updatedate" />
+
+		<TextView 
+			android:id="@+id/updatedate"
+			android:tag="{Value:UpdateDate, Converter:DateConverter}" 
+			style="@style/content_text" 
+/>
+
+	</LinearLayout>
+
+
+</LinearLayout>
+</ScrollView>

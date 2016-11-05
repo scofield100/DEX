@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView  xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:tools="http://schemas.android.com/tools"
+	android:layout_width="fill_parent"
+	android:layout_height="fill_parent">
+<LinearLayout 	android:layout_width="match_parent"
+	android:layout_height="match_parent"
+	android:orientation="vertical"
+	android:paddingTop="@dimen/content_padding_top"
+	android:paddingBottom="@dimen/content_padding_bottom"
+	android:paddingLeft="@dimen/activity_horizontal_margin"
+	android:paddingRight="@dimen/activity_horizontal_margin"
+	android:tag="{Value:Item}" >
+
+	<!-- Name -->
+
+	<LinearLayout style="@style/content_edit_panel"  >
+		<TextView 
+			style="@style/content_label" 
+			android:text="@string/name" />
+
+		<EditText 
+			android:id="@+id/name"
+			style="@style/content_text_edit"
+            android:hint="@string/required"
+			android:tag="{Value:Name, Required:true, Label:name}" android:inputType="textPersonName"  />
+
+	</LinearLayout>
+
+
+	<!-- Price -->
+
+	<LinearLayout android:layout_marginTop="@dimen/content_margin_top" 
+style="@style/content_edit_panel"  >
+		<TextView 
+			style="@style/content_label" 
+			android:text="@string/price" />
+
+		<EditText 
+			android:id="@+id/price"
+			style="@style/content_text_edit"
+            android:hint="@string/required"
+			android:tag="{Value:Price, Converter:DoubleConverter, Required:true, Label:price}" android:inputType="numberDecimal"  />
+
+	</LinearLayout>
+
+	<!-- AvailableCount -->
+
+	<LinearLayout android:layout_marginTop="@dimen/content_margin_top"
+		style="@style/content_edit_panel"  >
+		<TextView
+			style="@style/content_label"
+			android:text="@string/availablecount" />
+
+		<EditText
+			android:id="@+id/availablecount"
+			style="@style/content_text_edit"
+			android:tag="{Value:AvailableCount, Converter:IntegerConverterNullable, Label:availablecount}" android:inputType="number"  />
+
+	</LinearLayout>
+
+	<!-- IsAvailable -->
+
+	<LinearLayout android:layout_marginTop="@dimen/content_margin_top" 
+style="@style/content_edit_panel"  >
+
+		<CheckBox 
+			android:id="@+id/isavailable"
+			style="@style/content_checkbox" 
+			android:text="@string/isavailable" 
+			android:tag="{Value:IsAvailable, Label:isavailable}"/>
+
+	</LinearLayout>
+
+	<!-- IsDressing -->
+
+	<LinearLayout android:layout_marginTop="@dimen/content_margin_top" 
+style="@style/content_edit_panel"  >
+
+		<CheckBox 
+			android:id="@+id/isdressing"
+			style="@style/content_checkbox" 
+			android:text="@string/isdressing" 
+			android:tag="{Value:IsDressing, Label:isdressing}"/>
+
+	</LinearLayout>
+
+
+
+
+</LinearLayout>
+</ScrollView>

@@ -1,0 +1,494 @@
+-- Merging decision tree log ---
+manifest
+ADDED from AndroidManifest.xml:2:1
+	package
+		ADDED from AndroidManifest.xml:3:5
+		INJECTED from AndroidManifest.xml:0:0
+		INJECTED from AndroidManifest.xml:0:0
+	android:versionName
+		ADDED from AndroidManifest.xml:6:5
+	android:versionCode
+		ADDED from AndroidManifest.xml:5:5
+		INJECTED from AndroidManifest.xml:0:0
+		INJECTED from AndroidManifest.xml:0:0
+	xmlns:android
+		ADDED from AndroidManifest.xml:2:11
+	android:installLocation
+		ADDED from AndroidManifest.xml:4:5
+uses-sdk
+ADDED from AndroidManifest.xml:8:5
+MERGED from delivery2go_studio:com_enterlib_lib:unspecified:7:5
+MERGED from com.android.support:support-v4:21.0.3:15:5
+MERGED from com.android.support:support-v13:21.0.3:15:5
+MERGED from com.android.support:support-v4:21.0.3:15:5
+MERGED from com.android.support:support-v13:21.0.3:15:5
+MERGED from com.android.support:support-v4:21.0.3:15:5
+MERGED from com.android.support:support-v4:21.0.3:15:5
+	android:targetSdkVersion
+		ADDED from AndroidManifest.xml:10:9
+		INJECTED from AndroidManifest.xml:0:0
+		INJECTED from AndroidManifest.xml:0:0
+	android:minSdkVersion
+		ADDED from AndroidManifest.xml:9:9
+		INJECTED from AndroidManifest.xml:0:0
+		INJECTED from AndroidManifest.xml:0:0
+uses-permission#android.permission.ACCESS_NETWORK_STATE
+ADDED from AndroidManifest.xml:12:5
+	android:name
+		ADDED from AndroidManifest.xml:12:22
+uses-permission#android.permission.INTERNET
+ADDED from AndroidManifest.xml:13:5
+	android:name
+		ADDED from AndroidManifest.xml:13:22
+uses-permission#android.permission.WRITE_EXTERNAL_STORAGE
+ADDED from AndroidManifest.xml:14:5
+	android:name
+		ADDED from AndroidManifest.xml:14:22
+uses-permission#android.permission.READ_EXTERNAL_STORAGE
+ADDED from AndroidManifest.xml:15:5
+	android:name
+		ADDED from AndroidManifest.xml:15:22
+uses-permission#android.permission.READ_PHONE_STATE
+ADDED from AndroidManifest.xml:16:5
+	android:name
+		ADDED from AndroidManifest.xml:16:22
+application
+ADDED from AndroidManifest.xml:18:5
+MERGED from com.android.support:support-v4:21.0.3:16:5
+MERGED from com.android.support:support-v13:21.0.3:16:5
+MERGED from com.android.support:support-v4:21.0.3:16:5
+MERGED from com.android.support:support-v13:21.0.3:16:5
+MERGED from com.android.support:support-v4:21.0.3:16:5
+MERGED from com.android.support:support-v4:21.0.3:16:5
+	android:label
+		ADDED from AndroidManifest.xml:21:9
+	android:allowBackup
+		ADDED from AndroidManifest.xml:19:9
+	android:icon
+		ADDED from AndroidManifest.xml:20:9
+	android:theme
+		ADDED from AndroidManifest.xml:22:9
+	android:name
+		ADDED from AndroidManifest.xml:23:9
+activity#com.delivery2go.home.MainActivity
+ADDED from AndroidManifest.xml:25:9
+	android:label
+		ADDED from AndroidManifest.xml:27:13
+	android:name
+		ADDED from AndroidManifest.xml:26:13
+intent-filter#android.intent.action.MAIN+android.intent.category.LAUNCHER
+ADDED from AndroidManifest.xml:28:13
+action#android.intent.action.MAIN
+ADDED from AndroidManifest.xml:29:17
+	android:name
+		ADDED from AndroidManifest.xml:29:25
+category#android.intent.category.LAUNCHER
+ADDED from AndroidManifest.xml:31:17
+	android:name
+		ADDED from AndroidManifest.xml:31:27
+activity#com.delivery2go.home.ActivitySearchEntities
+ADDED from AndroidManifest.xml:35:10
+	android:label
+		ADDED from AndroidManifest.xml:37:13
+	android:name
+		ADDED from AndroidManifest.xml:36:13
+activity#com.delivery2go.entity.ActivityEntityWelcome
+ADDED from AndroidManifest.xml:40:11
+	android:label
+		ADDED from AndroidManifest.xml:42:13
+	android:name
+		ADDED from AndroidManifest.xml:41:13
+activity#com.delivery2go.entity.ActivityOrderDish
+ADDED from AndroidManifest.xml:51:4
+	android:screenOrientation
+		ADDED from AndroidManifest.xml:54:15
+	android:label
+		ADDED from AndroidManifest.xml:52:15
+	android:theme
+		ADDED from AndroidManifest.xml:53:15
+	android:name
+		ADDED from AndroidManifest.xml:51:14
+activity#com.delivery2go.base.modules.dashboard.ActivityDashboard
+ADDED from AndroidManifest.xml:59:5
+	android:label
+		ADDED from AndroidManifest.xml:61:6
+	android:name
+		ADDED from AndroidManifest.xml:60:6
+activity#com.delivery2go.base.modules.entitycategory.ActivityEntityCategoryList
+ADDED from AndroidManifest.xml:65:5
+	android:label
+		ADDED from AndroidManifest.xml:67:6
+	android:name
+		ADDED from AndroidManifest.xml:66:6
+activity#com.delivery2go.base.modules.entitycategory.ActivityEntityCategoryDetails
+ADDED from AndroidManifest.xml:69:5
+	android:label
+		ADDED from AndroidManifest.xml:71:6
+	android:name
+		ADDED from AndroidManifest.xml:70:6
+activity#com.delivery2go.base.modules.entitycategory.ActivityEntityCategoryEdit
+ADDED from AndroidManifest.xml:73:5
+	android:label
+		ADDED from AndroidManifest.xml:75:6
+	android:name
+		ADDED from AndroidManifest.xml:74:6
+activity#com.delivery2go.base.modules.dishcategory.ActivityDishCategoryList
+ADDED from AndroidManifest.xml:79:5
+	android:label
+		ADDED from AndroidManifest.xml:81:6
+	android:name
+		ADDED from AndroidManifest.xml:80:6
+activity#com.delivery2go.base.modules.dishcategory.ActivityDishCategoryDetails
+ADDED from AndroidManifest.xml:83:5
+	android:label
+		ADDED from AndroidManifest.xml:85:6
+	android:name
+		ADDED from AndroidManifest.xml:84:6
+activity#com.delivery2go.base.modules.dishcategory.ActivityDishCategoryEdit
+ADDED from AndroidManifest.xml:87:5
+	android:label
+		ADDED from AndroidManifest.xml:89:6
+	android:name
+		ADDED from AndroidManifest.xml:88:6
+activity#com.delivery2go.base.modules.state.ActivityStateList
+ADDED from AndroidManifest.xml:93:5
+	android:label
+		ADDED from AndroidManifest.xml:95:6
+	android:name
+		ADDED from AndroidManifest.xml:94:6
+activity#com.delivery2go.base.modules.state.ActivityStateDetails
+ADDED from AndroidManifest.xml:97:5
+	android:label
+		ADDED from AndroidManifest.xml:99:6
+	android:name
+		ADDED from AndroidManifest.xml:98:6
+activity#com.delivery2go.base.modules.state.ActivityStateEdit
+ADDED from AndroidManifest.xml:101:5
+	android:label
+		ADDED from AndroidManifest.xml:103:6
+	android:name
+		ADDED from AndroidManifest.xml:102:6
+activity#com.delivery2go.base.modules.image.ActivityImageList
+ADDED from AndroidManifest.xml:107:5
+	android:label
+		ADDED from AndroidManifest.xml:109:6
+	android:name
+		ADDED from AndroidManifest.xml:108:6
+activity#com.delivery2go.base.modules.image.ActivityImageDetails
+ADDED from AndroidManifest.xml:111:5
+	android:label
+		ADDED from AndroidManifest.xml:113:6
+	android:name
+		ADDED from AndroidManifest.xml:112:6
+activity#com.delivery2go.base.modules.image.ActivityImageEdit
+ADDED from AndroidManifest.xml:115:5
+	android:label
+		ADDED from AndroidManifest.xml:117:6
+	android:name
+		ADDED from AndroidManifest.xml:116:6
+activity#com.delivery2go.base.modules.entityimages.ActivityEntityImagesList
+ADDED from AndroidManifest.xml:121:5
+	android:label
+		ADDED from AndroidManifest.xml:123:6
+	android:name
+		ADDED from AndroidManifest.xml:122:6
+activity#com.delivery2go.base.modules.entityimages.ActivityEntityImagesDetails
+ADDED from AndroidManifest.xml:125:5
+	android:label
+		ADDED from AndroidManifest.xml:127:6
+	android:name
+		ADDED from AndroidManifest.xml:126:6
+activity#com.delivery2go.base.modules.entityimages.ActivityEntityImagesEdit
+ADDED from AndroidManifest.xml:129:5
+	android:label
+		ADDED from AndroidManifest.xml:131:6
+	android:name
+		ADDED from AndroidManifest.xml:130:6
+activity#com.delivery2go.base.modules.entitycategories.ActivityEntityCategoriesList
+ADDED from AndroidManifest.xml:135:5
+	android:label
+		ADDED from AndroidManifest.xml:137:6
+	android:name
+		ADDED from AndroidManifest.xml:136:6
+activity#com.delivery2go.base.modules.entitycategories.ActivityEntityCategoriesDetails
+ADDED from AndroidManifest.xml:139:5
+	android:label
+		ADDED from AndroidManifest.xml:141:6
+	android:name
+		ADDED from AndroidManifest.xml:140:6
+activity#com.delivery2go.base.modules.entitycategories.ActivityEntityCategoriesEdit
+ADDED from AndroidManifest.xml:143:5
+	android:label
+		ADDED from AndroidManifest.xml:145:6
+	android:name
+		ADDED from AndroidManifest.xml:144:6
+activity#com.delivery2go.base.modules.dishcategories.ActivityDishCategoriesList
+ADDED from AndroidManifest.xml:149:5
+	android:label
+		ADDED from AndroidManifest.xml:151:6
+	android:name
+		ADDED from AndroidManifest.xml:150:6
+activity#com.delivery2go.base.modules.dishcategories.ActivityDishCategoriesDetails
+ADDED from AndroidManifest.xml:153:5
+	android:label
+		ADDED from AndroidManifest.xml:155:6
+	android:name
+		ADDED from AndroidManifest.xml:154:6
+activity#com.delivery2go.base.modules.dishcategories.ActivityDishCategoriesEdit
+ADDED from AndroidManifest.xml:157:5
+	android:label
+		ADDED from AndroidManifest.xml:159:6
+	android:name
+		ADDED from AndroidManifest.xml:158:6
+activity#com.delivery2go.base.modules.dishimages.ActivityDishImagesList
+ADDED from AndroidManifest.xml:163:5
+	android:label
+		ADDED from AndroidManifest.xml:165:6
+	android:name
+		ADDED from AndroidManifest.xml:164:6
+activity#com.delivery2go.base.modules.dishimages.ActivityDishImagesDetails
+ADDED from AndroidManifest.xml:167:5
+	android:label
+		ADDED from AndroidManifest.xml:169:6
+	android:name
+		ADDED from AndroidManifest.xml:168:6
+activity#com.delivery2go.base.modules.dishimages.ActivityDishImagesEdit
+ADDED from AndroidManifest.xml:171:5
+	android:label
+		ADDED from AndroidManifest.xml:173:6
+	android:name
+		ADDED from AndroidManifest.xml:172:6
+activity#com.delivery2go.base.modules.city.ActivityCityList
+ADDED from AndroidManifest.xml:177:5
+	android:label
+		ADDED from AndroidManifest.xml:179:6
+	android:name
+		ADDED from AndroidManifest.xml:178:6
+activity#com.delivery2go.base.modules.city.ActivityCityDetails
+ADDED from AndroidManifest.xml:181:5
+	android:label
+		ADDED from AndroidManifest.xml:183:6
+	android:name
+		ADDED from AndroidManifest.xml:182:6
+activity#com.delivery2go.base.modules.city.ActivityCityEdit
+ADDED from AndroidManifest.xml:185:5
+	android:label
+		ADDED from AndroidManifest.xml:187:6
+	android:name
+		ADDED from AndroidManifest.xml:186:6
+activity#com.delivery2go.base.modules.clientdishfavorites.ActivityClientDishFavoritesList
+ADDED from AndroidManifest.xml:191:5
+	android:label
+		ADDED from AndroidManifest.xml:193:6
+	android:name
+		ADDED from AndroidManifest.xml:192:6
+activity#com.delivery2go.base.modules.clientdishfavorites.ActivityClientDishFavoritesDetails
+ADDED from AndroidManifest.xml:195:5
+	android:label
+		ADDED from AndroidManifest.xml:197:6
+	android:name
+		ADDED from AndroidManifest.xml:196:6
+activity#com.delivery2go.base.modules.clientdishfavorites.ActivityClientDishFavoritesEdit
+ADDED from AndroidManifest.xml:199:5
+	android:label
+		ADDED from AndroidManifest.xml:201:6
+	android:name
+		ADDED from AndroidManifest.xml:200:6
+activity#com.delivery2go.base.modules.cliententityfavorites.ActivityClientEntityFavoritesList
+ADDED from AndroidManifest.xml:205:5
+	android:label
+		ADDED from AndroidManifest.xml:207:6
+	android:name
+		ADDED from AndroidManifest.xml:206:6
+activity#com.delivery2go.base.modules.cliententityfavorites.ActivityClientEntityFavoritesDetails
+ADDED from AndroidManifest.xml:209:5
+	android:label
+		ADDED from AndroidManifest.xml:211:6
+	android:name
+		ADDED from AndroidManifest.xml:210:6
+activity#com.delivery2go.base.modules.cliententityfavorites.ActivityClientEntityFavoritesEdit
+ADDED from AndroidManifest.xml:213:5
+	android:label
+		ADDED from AndroidManifest.xml:215:6
+	android:name
+		ADDED from AndroidManifest.xml:214:6
+activity#com.delivery2go.base.modules.client.ActivityClientList
+ADDED from AndroidManifest.xml:219:5
+	android:label
+		ADDED from AndroidManifest.xml:221:6
+	android:name
+		ADDED from AndroidManifest.xml:220:6
+activity#com.delivery2go.base.modules.client.ActivityClientDetails
+ADDED from AndroidManifest.xml:223:5
+	android:label
+		ADDED from AndroidManifest.xml:225:6
+	android:name
+		ADDED from AndroidManifest.xml:224:6
+activity#com.delivery2go.base.modules.client.ActivityClientEdit
+ADDED from AndroidManifest.xml:227:5
+	android:label
+		ADDED from AndroidManifest.xml:229:6
+	android:name
+		ADDED from AndroidManifest.xml:228:6
+activity#com.delivery2go.base.modules.entitymenu.ActivityEntityMenuList
+ADDED from AndroidManifest.xml:233:5
+	android:label
+		ADDED from AndroidManifest.xml:235:6
+	android:name
+		ADDED from AndroidManifest.xml:234:6
+activity#com.delivery2go.base.modules.entitymenu.ActivityEntityMenuDetails
+ADDED from AndroidManifest.xml:237:5
+	android:label
+		ADDED from AndroidManifest.xml:239:6
+	android:name
+		ADDED from AndroidManifest.xml:238:6
+activity#com.delivery2go.base.modules.entitymenu.ActivityEntityMenuEdit
+ADDED from AndroidManifest.xml:241:5
+	android:label
+		ADDED from AndroidManifest.xml:243:6
+	android:name
+		ADDED from AndroidManifest.xml:242:6
+activity#com.delivery2go.base.modules.addons.ActivityAddonsList
+ADDED from AndroidManifest.xml:247:5
+	android:label
+		ADDED from AndroidManifest.xml:249:6
+	android:name
+		ADDED from AndroidManifest.xml:248:6
+activity#com.delivery2go.base.modules.addons.ActivityAddonsDetails
+ADDED from AndroidManifest.xml:251:5
+	android:label
+		ADDED from AndroidManifest.xml:253:6
+	android:name
+		ADDED from AndroidManifest.xml:252:6
+activity#com.delivery2go.base.modules.addons.ActivityAddonsEdit
+ADDED from AndroidManifest.xml:255:5
+	android:label
+		ADDED from AndroidManifest.xml:257:6
+	android:name
+		ADDED from AndroidManifest.xml:256:6
+activity#com.delivery2go.base.modules.orderdish.ActivityOrderDishList
+ADDED from AndroidManifest.xml:261:5
+	android:label
+		ADDED from AndroidManifest.xml:263:6
+	android:name
+		ADDED from AndroidManifest.xml:262:6
+activity#com.delivery2go.base.modules.orderdish.ActivityOrderDishDetails
+ADDED from AndroidManifest.xml:265:5
+	android:label
+		ADDED from AndroidManifest.xml:267:6
+	android:name
+		ADDED from AndroidManifest.xml:266:6
+activity#com.delivery2go.base.modules.orderdish.ActivityOrderDishEdit
+ADDED from AndroidManifest.xml:269:5
+	android:label
+		ADDED from AndroidManifest.xml:271:6
+	android:name
+		ADDED from AndroidManifest.xml:270:6
+activity#com.delivery2go.base.modules.orderstate.ActivityOrderStateList
+ADDED from AndroidManifest.xml:275:5
+	android:label
+		ADDED from AndroidManifest.xml:277:6
+	android:name
+		ADDED from AndroidManifest.xml:276:6
+activity#com.delivery2go.base.modules.orderstate.ActivityOrderStateDetails
+ADDED from AndroidManifest.xml:279:5
+	android:label
+		ADDED from AndroidManifest.xml:281:6
+	android:name
+		ADDED from AndroidManifest.xml:280:6
+activity#com.delivery2go.base.modules.orderstate.ActivityOrderStateEdit
+ADDED from AndroidManifest.xml:283:5
+	android:label
+		ADDED from AndroidManifest.xml:285:6
+	android:name
+		ADDED from AndroidManifest.xml:284:6
+activity#com.delivery2go.base.modules.ordertype.ActivityOrderTypeList
+ADDED from AndroidManifest.xml:289:5
+	android:label
+		ADDED from AndroidManifest.xml:291:6
+	android:name
+		ADDED from AndroidManifest.xml:290:6
+activity#com.delivery2go.base.modules.ordertype.ActivityOrderTypeDetails
+ADDED from AndroidManifest.xml:293:5
+	android:label
+		ADDED from AndroidManifest.xml:295:6
+	android:name
+		ADDED from AndroidManifest.xml:294:6
+activity#com.delivery2go.base.modules.ordertype.ActivityOrderTypeEdit
+ADDED from AndroidManifest.xml:297:5
+	android:label
+		ADDED from AndroidManifest.xml:299:6
+	android:name
+		ADDED from AndroidManifest.xml:298:6
+activity#com.delivery2go.base.modules.order.ActivityOrderList
+ADDED from AndroidManifest.xml:303:5
+	android:label
+		ADDED from AndroidManifest.xml:305:6
+	android:name
+		ADDED from AndroidManifest.xml:304:6
+activity#com.delivery2go.base.modules.order.ActivityOrderDetails
+ADDED from AndroidManifest.xml:307:5
+	android:label
+		ADDED from AndroidManifest.xml:309:6
+	android:name
+		ADDED from AndroidManifest.xml:308:6
+activity#com.delivery2go.base.modules.order.ActivityOrderEdit
+ADDED from AndroidManifest.xml:311:5
+	android:label
+		ADDED from AndroidManifest.xml:313:6
+	android:name
+		ADDED from AndroidManifest.xml:312:6
+activity#com.delivery2go.base.modules.orderdishaddons.ActivityOrderDishAddonsList
+ADDED from AndroidManifest.xml:317:5
+	android:label
+		ADDED from AndroidManifest.xml:319:6
+	android:name
+		ADDED from AndroidManifest.xml:318:6
+activity#com.delivery2go.base.modules.orderdishaddons.ActivityOrderDishAddonsDetails
+ADDED from AndroidManifest.xml:321:5
+	android:label
+		ADDED from AndroidManifest.xml:323:6
+	android:name
+		ADDED from AndroidManifest.xml:322:6
+activity#com.delivery2go.base.modules.orderdishaddons.ActivityOrderDishAddonsEdit
+ADDED from AndroidManifest.xml:325:5
+	android:label
+		ADDED from AndroidManifest.xml:327:6
+	android:name
+		ADDED from AndroidManifest.xml:326:6
+activity#com.delivery2go.base.modules.dish.ActivityDishList
+ADDED from AndroidManifest.xml:331:5
+	android:label
+		ADDED from AndroidManifest.xml:333:6
+	android:name
+		ADDED from AndroidManifest.xml:332:6
+activity#com.delivery2go.base.modules.dish.ActivityDishDetails
+ADDED from AndroidManifest.xml:335:5
+	android:label
+		ADDED from AndroidManifest.xml:337:6
+	android:name
+		ADDED from AndroidManifest.xml:336:6
+activity#com.delivery2go.base.modules.dish.ActivityDishEdit
+ADDED from AndroidManifest.xml:339:5
+	android:label
+		ADDED from AndroidManifest.xml:341:6
+	android:name
+		ADDED from AndroidManifest.xml:340:6
+activity#com.delivery2go.base.modules.entity.ActivityEntityList
+ADDED from AndroidManifest.xml:345:5
+	android:label
+		ADDED from AndroidManifest.xml:347:6
+	android:name
+		ADDED from AndroidManifest.xml:346:6
+activity#com.delivery2go.base.modules.entity.ActivityEntityDetails
+ADDED from AndroidManifest.xml:349:5
+	android:label
+		ADDED from AndroidManifest.xml:351:6
+	android:name
+		ADDED from AndroidManifest.xml:350:6
+activity#com.delivery2go.base.modules.entity.ActivityEntityEdit
+ADDED from AndroidManifest.xml:353:5
+	android:label
+		ADDED from AndroidManifest.xml:355:6
+	android:name
+		ADDED from AndroidManifest.xml:354:6

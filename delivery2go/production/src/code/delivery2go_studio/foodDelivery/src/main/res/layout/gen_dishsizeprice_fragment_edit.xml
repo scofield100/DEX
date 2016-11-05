@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView  xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:tools="http://schemas.android.com/tools"
+	android:layout_width="fill_parent"
+	android:layout_height="fill_parent">
+<LinearLayout 	android:layout_width="match_parent"
+	android:layout_height="match_parent"
+	android:orientation="vertical"
+	android:paddingRight="@dimen/activity_horizontal_margin"
+	android:paddingLeft="@dimen/activity_horizontal_margin"
+	android:paddingTop="@dimen/activity_vertical_margin"
+	android:paddingBottom="@dimen/activity_vertical_margin"
+	android:tag="{Value:Item}" >
+
+	<!-- SizeId -->
+
+	<LinearLayout style="@style/content_edit_panel"  >
+		<TextView 
+			style="@style/content_label" 
+			android:text="@string/sizeid" />
+
+		<Spinner 
+			android:id="@+id/sizeid"
+			style="@style/content_spinner" 
+			android:tag="{Value:SizeId, Items:DishSizes, Comparer:DishSizeComparer, Key:Id, Required:true, Label:sizeid}" /> 
+
+	</LinearLayout>
+
+
+	<!-- ExtraPrice -->
+
+	<LinearLayout android:layout_marginTop="@dimen/content_margin_top" 
+style="@style/content_edit_panel"  >
+		<TextView 
+			style="@style/content_label" 
+			android:text="@string/extraprice" />
+
+		<EditText 
+			android:id="@+id/extraprice"
+			style="@style/content_text_edit" 
+			android:tag="{Value:ExtraPrice, Converter:DoubleConverter, Label:extraprice}"
+			android:inputType="numberDecimal|numberSigned"  />
+
+	</LinearLayout>
+
+	<!-- AvailableCount -->
+
+	<LinearLayout android:layout_marginTop="@dimen/content_margin_top" 
+style="@style/content_edit_panel"  >
+		<TextView 
+			style="@style/content_label" 
+			android:text="@string/availablecount" />
+
+		<EditText 
+			android:id="@+id/availablecount"
+			style="@style/content_text_edit" 
+			android:tag="{Value:AvailableCount, Converter:IntegerConverterNullable, Label:availablecount}" android:inputType="number"  />
+
+	</LinearLayout>
+
+</LinearLayout>
+</ScrollView>

@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:paddingTop="@dimen/adapter_padding_top"
+    android:paddingBottom="@dimen/adapter_padding_bottom"
+     >
+
+    <TextView       
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:tag="{Value:RollName}"
+        android:text="Not Avalaible"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <CheckBox
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/canread"
+            android:clickable="false"
+            android:focusable="false"
+            android:textSize="12sp"
+            android:tag="{Value:CanRead}"/>
+
+        <CheckBox
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="12sp"
+            android:text="@string/canwrite"
+            android:clickable="false"
+            android:focusable="false"
+            android:tag="{Value:CanWrite}"/>
+
+        <CheckBox
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/cancreate"
+            android:clickable="false"
+            android:focusable="false"
+            android:textSize="12sp"
+            android:tag="{Value:CanCreate}"/>
+
+        <CheckBox
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/candelete"
+            android:clickable="false"
+            android:focusable="false"
+            android:textSize="12sp"
+            android:tag="{Value:CanDelete}"/>
+
+    </LinearLayout>
+
+
+</LinearLayout>

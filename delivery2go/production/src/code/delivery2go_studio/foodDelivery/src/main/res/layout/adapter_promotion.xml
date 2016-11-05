@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+ <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+     android:layout_width="wrap_content"
+     android:layout_height="wrap_content"
+     android:paddingLeft="5dp"
+     android:paddingRight="5dp">
+     
+<ImageView      
+    android:layout_width="64dp"
+    android:layout_height="64dp"
+    android:src="@drawable/sample_image" 
+    android:maxWidth="64dp"
+    android:maxHeight="64dp"
+    android:tag="{Value:Image}"
+    android:scaleType="fitXY" />
+
+</RelativeLayout>

@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/home_background" >
+
+    <LinearLayout
+        android:id="@+id/top_panel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/FavoritesPanel"
+        android:layout_alignParentTop="true"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/home_logo_panel"
+            android:gravity="center" >
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:src="@drawable/home_title" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#84c8b698"
+            android:gravity="center_horizontal"
+            android:padding="10dp" >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/gray"
+                android:gravity="center_vertical" >
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@color/white"
+                    android:orientation="horizontal" >
+
+                <AutoCompleteTextView
+                    android:id="@+id/editText1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:hint="@string/home_hint_searchbox"
+                    android:inputType="textAutoComplete"
+                    android:singleLine="true"
+                    android:paddingLeft="16dp"
+                    android:paddingTop="16dp"
+                    android:paddingBottom="16dp"
+                    android:textStyle="italic"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight="1"
+                    android:background="@null"
+                    />
+
+                <ImageButton
+                    android:id="@+id/imageBtnClear"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_clear_normal"
+                    android:background="@null"
+                    android:layout_gravity="center_vertical"
+                    android:visibility="gone" />
+
+                </LinearLayout>
+
+                <ImageButton
+                    android:id="@+id/imageButton1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@null"
+                    android:padding="5dp"
+                    android:src="@drawable/ic_action_location_2"
+                    />
+            </LinearLayout>
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/btnSearch"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/bg_find_restaurant"
+            android:text="@string/find_restaurant"
+            android:textColor="#ffffff"
+            android:textStyle="bold"
+            />
+    </LinearLayout>
+
+    <FrameLayout
+        android:id="@+id/FavoritesPanel"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/home_favorites_panel"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="5dp">
+
+        <android.support.v4.view.ViewPager
+            android:id="@+id/pager"
+            android:layout_width="match_parent"
+            android:layout_height="82dp"
+            android:visibility="gone"
+            android:tag="{Value:Cursor,
+        			  ItemTemplate:home_entity_favorites_adapter, 
+        			  AsList:true,
+        			  SelectionCommand:OnFavoriteSelected,
+        			  Visibility:ShowFavorites }" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ems="16"
+            android:visibility="visible"
+            android:text="@string/favorites_entities_empty"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:tag="{Visibility:ShowFavoritesText}" />
+
+    </FrameLayout>
+
+</RelativeLayout>

@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView  xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:tools="http://schemas.android.com/tools"
+	android:layout_width="fill_parent"
+	android:layout_height="fill_parent">
+<LinearLayout 	android:layout_width="match_parent"
+	android:layout_height="match_parent"
+	android:orientation="vertical"
+	android:paddingTop="@dimen/activity_vertical_margin"
+	android:paddingBottom="@dimen/activity_vertical_margin"
+	android:paddingLeft="@dimen/activity_horizontal_margin"
+	android:paddingRight="@dimen/activity_horizontal_margin"
+	android:tag="{Value:Item}" >
+
+	<!-- OrderStateId -->
+
+	<LinearLayout android:layout_marginTop="@dimen/content_margin_top"
+		style="@style/content_edit_panel"  >
+		<TextView
+			style="@style/content_label"
+			android:text="@string/orderstateid" />
+
+		<Spinner
+			android:id="@+id/orderstateid"
+			style="@style/content_spinner"
+			android:tag="{Value:OrderStateId, Items:OrderStates, Comparer:OrderStateComparer, Key:Id, Label:orderstateid}" />
+
+	</LinearLayout>
+
+	<!-- DeliveryTimeMinutes -->
+
+	<LinearLayout android:layout_marginTop="@dimen/content_margin_top"
+		style="@style/content_edit_panel"  >
+		<TextView
+			style="@style/content_label"
+			android:text="@string/deliverytimeminutes" />
+
+		<EditText
+			android:id="@+id/deliverytimeminutes"
+			style="@style/content_text_edit"
+			android:hint="Estimate time in minutes"
+			android:tag="{Value:DeliveryTimeMinutes, Converter:IntegerConverterNullable, Label:deliverytimeminutes}"
+			android:inputType="number"  />
+
+	</LinearLayout>
+
+	<!--&lt;!&ndash; PaymentRef &ndash;&gt;-->
+	<!--<LinearLayout-->
+		<!--android:layout_width="match_parent"-->
+		<!--android:layout_height="wrap_content"-->
+		<!--android:orientation="vertical"-->
+		<!--android:padding="10dp"-->
+		<!--android:layout_marginTop="@dimen/content_margin_top"-->
+		<!--android:background="@drawable/white_round_rect">-->
+		<!--<TextView-->
+			<!--android:layout_width="wrap_content"-->
+			<!--android:layout_height="wrap_content"-->
+			<!--android:text="@string/payment"-->
+			<!--android:textColor="@color/text_secondary"/>-->
+
+		<!--<EditText-->
+			<!--android:id="@+id/paymentref"-->
+			<!--style="@style/content_text_edit"-->
+			<!--android:tag="{Value:PaymentRef, Label:paymentref}" android:inputType="text"  />-->
+
+	<!--</LinearLayout>-->
+
+	<!-- Remarks -->
+
+	<LinearLayout
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:orientation="vertical"
+		android:padding="10dp"
+		android:layout_marginTop="@dimen/content_margin_top"
+		android:background="@drawable/white_round_rect">
+		<TextView
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:text="@string/remarks"
+			android:textColor="@color/text_secondary"/>
+
+		<EditText
+			android:id="@+id/remarks"
+			style="@style/content_text_edit"
+            android:lines="4"
+            android:gravity="left|start"
+			android:tag="{Value:Remarks, Label:remarks}"
+            android:inputType="textMultiLine"  />
+
+	</LinearLayout>
+
+</LinearLayout>
+</ScrollView>

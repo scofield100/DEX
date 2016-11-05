@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="@dimen/adapter_padding_top">
+    
+<RelativeLayout 
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/white_round_rect"       
+    android:padding="@dimen/content_margin_top">
+
+    <ImageView
+        android:id="@+id/entityImage"
+        android:layout_width="@dimen/adapter_image"
+        android:layout_height="@dimen/adapter_image"
+        android:scaleType="centerCrop"
+        android:background="@drawable/transparent_round_rect"
+        android:padding="5dp"
+        android:layout_centerVertical="true"
+        android:tag="{Value:ImageId, Converter:ImageConverter}" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout1"
+        android:layout_toRightOf="@+id/entityImage"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"      
+        android:layout_marginLeft="5dp"
+        android:orientation="vertical" >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
+
+            <!-- Name -->
+            <TextView
+                android:id="@+id/entityName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:tag="{Value:Name}"
+                android:singleLine="true"
+                android:ellipsize="end"
+                android:text="Dino&apos;s Pizza"
+                android:layout_toLeftOf="@+id/distance"
+                android:textAppearance="?android:attr/textAppearanceMedium" />
+
+            <TextView
+                android:id="@+id/distance"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_alignBaseline="@+id/entityName"
+                android:text="1.57 mi"
+                 android:tag="{Value:DistanceString}"
+                 android:textColor="@color/text_secondary"
+                android:textAppearance="?android:attr/textAppearanceSmall" />
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/content_margin_top" >
+
+            <!-- Rating -->
+            <LinearLayout
+                android:id="@+id/ratingBar1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"                
+                android:tag="{Value:Ranking, ItemTemplate:adapter_rating, Converter:RankingConverter}"
+                 />
+
+            <!-- ReviewCount -->
+            <TextView
+                android:id="@+id/textView1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/content_margin_left"
+                android:text="#Review"
+                android:tag="{Value:ReviewCountString}"                
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:textColor="@color/text_secondary" />
+        </LinearLayout>
+
+        <!-- Tags -->
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Medium Text"
+            android:tag="{Value:Tags}"
+             />
+
+        <LinearLayout
+            android:id="@+id/RelativeLayout1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:id="@+id/textView6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/text_secondary"
+                android:text="Delivery"
+                android:textAppearance="?android:attr/textAppearanceSmall" />
+            
+            <!-- delivery price -->
+            <TextView
+                android:id="@+id/textView3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"                                
+                android:text="$3.50"
+                android:tag="{Value:DeliveryPrice, Converter:CurrencyConverter}"
+                android:textColor="@color/text_secondary"
+                android:layout_marginLeft="3dp"
+                 android:textAppearance="?android:attr/textAppearanceSmall"/>
+
+            <TextView
+                android:id="@+id/textView4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"                
+                android:text="(35-45 min)"
+                android:tag="{Value:DeliveryTime}"
+                android:layout_marginLeft="3dp"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:textColor="@color/text_secondary" />
+            
+            
+            <Space android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"/>
+            
+            <TextView
+                android:id="@+id/min_price"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"                
+                android:text="$20.00"
+                android:layout_marginLeft="3dp"
+                android:tag="{Value:MinPrice, Converter:CurrencyConverter}"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:textColor="@color/text_secondary" />
+            
+
+        </LinearLayout>
+    </LinearLayout>
+
+</RelativeLayout>
+</LinearLayout>

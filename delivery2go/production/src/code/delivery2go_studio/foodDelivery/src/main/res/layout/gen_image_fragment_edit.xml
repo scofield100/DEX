@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView  xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:tools="http://schemas.android.com/tools"
+	android:layout_width="fill_parent"
+	android:layout_height="fill_parent">
+<LinearLayout 	android:layout_width="match_parent"
+	android:layout_height="match_parent"
+	android:orientation="vertical"
+	android:paddingTop="@dimen/content_padding_top"
+	android:paddingBottom="@dimen/content_padding_bottom"
+	android:tag="{Value:Item}" >
+
+	<!-- Location -->
+
+	<LinearLayout style="@style/content_edit_panel"  >
+		<TextView 
+			style="@style/content_label" 
+			android:text="@string/location" />
+
+		<EditText 
+			android:id="@+id/location"
+			style="@style/content_text_edit" 
+			android:tag="{Value:Location, Required:true, Label:location}" android:inputType="text"  />
+
+	</LinearLayout>
+
+	<!-- UpdateUserId -->
+
+	<LinearLayout android:layout_marginTop="@dimen/content_margin_top" 
+style="@style/content_edit_panel"  >
+		<TextView 
+			style="@style/content_label" 
+			android:text="@string/updateuserid" />
+
+		<Spinner 
+			android:id="@+id/updateuserid"
+			style="@style/content_spinner" 
+			android:tag="{Value:UpdateUserId, Items:UsersOptional, Comparer:UserComparer, Key:Id, Label:updateuserid}" /> 
+
+	</LinearLayout>
+</LinearLayout>
+</ScrollView>

@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+  <LinearLayout
+      android:layout_alignParentLeft="true"
+      android:orientation="vertical"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content">
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@drawable/loginbar" />
+
+
+     <TextView
+        android:id="@+id/dishid"
+        android:tag="{Value:DishName, ClickCommand:NavigateToDish}"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="DishName"
+         android:layout_alignParentTop="true"
+        android:layout_toLeftOf="@+id/action_edit"
+         android:layout_marginRight="32dp"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    <!-- SizeId -->
+
+    <LinearLayout
+        android:layout_marginTop="@dimen/content_margin_top"
+        style="@style/content_panel"  >
+        <TextView
+            style="@style/content_label"
+            android:text="@string/lb_sizename" />
+
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:layout_marginLeft="5dp"
+            android:tag="{Value:Size, Async:true}">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:tag="{Value:SizeName}"/>
+
+            <TextView
+                android:layout_marginLeft="@dimen/content_margin_left"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:tag="{Value:ExtraPrice, Converter:CurrencyConverter}"/>
+
+            <!--<TextView-->
+                <!--android:id="@+id/sizeid"-->
+                <!--android:tag="{Value:SizeName}"-->
+                <!--style="@style/content_text"-->
+                <!--/>-->
+
+            </LinearLayout>
+
+
+    </LinearLayout>
+
+      <!-- DishPrice -->
+      <LinearLayout
+          android:layout_marginTop="@dimen/content_margin_top"
+          style="@style/content_panel"  >
+
+          <TextView
+              style="@style/content_label"
+              android:text="@string/lb_dishprice" />
+
+          <TextView
+              android:id="@+id/dishprice"
+              android:tag="{Value:DishPrice, Converter:CurrencyConverter}"
+              style="@style/content_text"
+              />
+
+      </LinearLayout>
+
+    <!-- Quantity -->
+
+      <LinearLayout
+          android:layout_marginTop="@dimen/content_margin_top"
+          style="@style/content_panel"  >
+          <TextView
+              style="@style/content_label"
+              android:text="@string/lb_quantity" />
+
+          <TextView
+              android:id="@+id/quantity"
+              android:tag="{Value:Quantity}"
+              style="@style/content_text"
+              />
+
+      </LinearLayout>
+
+    <!-- SubTotal -->
+
+    <LinearLayout
+        android:layout_marginTop="@dimen/content_margin_top"
+        style="@style/content_panel"  >
+        <TextView
+            style="@style/content_label"
+            android:text="@string/lb_subtotal" />
+
+        <TextView
+            android:id="@+id/subtotal"
+            android:tag="{Value:SubTotal, Converter:CurrencyConverter}"
+            style="@style/content_text"
+            />
+    </LinearLayout>
+
+    <!-- DressingId -->
+    <LinearLayout
+        android:layout_marginTop="@dimen/content_margin_top"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:tag="{HideEmpty:true}">
+
+        <TextView
+            style="@style/content_label"
+            android:text="@string/lb_dressingname" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:layout_marginLeft="5dp" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:tag="{Value:DressingName}"/>
+
+            <TextView
+                android:layout_marginLeft="@dimen/content_margin_left"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right|top"
+                android:tag="{Value:DressingPrice, Converter:CurrencyConverter}"/>
+
+        </LinearLayout>
+    </LinearLayout>
+
+    <!--Extras -->
+    <TextView
+        android:layout_marginTop="@dimen/content_margin_left"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        style="@style/content_label"
+        android:text="Extras:"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@drawable/transparent_round_rect"
+        android:paddingLeft="10dp"
+        android:tag="{Value:OrderDishAddonses, ItemTemplate:orderdishaddons_adapter, Async:true}" >
+
+        </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:background="@color/gray"
+        android:layout_marginTop="3dp"
+        android:layout_marginBottom="3dp"/>
+
+</LinearLayout>
+
+    <ImageButton
+        android:id="@+id/action_edit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:background="@null"
+        android:src="@drawable/ic_action_edit_yellow"
+        android:tag="{ClickCommand:EditItem}"/>
+
+    <ImageButton
+        android:id="@+id/action_delete"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:background="@null"
+        android:src="@drawable/ic_action_delete"
+        android:layout_below="@+id/action_edit"
+        android:tag="{ClickCommand:DeleteItem}"/>
+
+</RelativeLayout>

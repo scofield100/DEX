@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    tools:context="com.delivery2go.console.ActivityDashboard"
+    android:background="@color/ActivityBackground">
+
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:stretchColumns="0,1"
+        android:layout_centerInParent="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentBottom="true"
+        android:orientation="vertical">
+
+        <TableRow android:layout_marginTop="@dimen/content_margin_top" android:layout_weight="1" >
+
+            <Button android:id="@+id/restaurants" android:drawableTop="@drawable/java" style="@style/DashboardButton"  android:text="Restaurants" android:onClick="onClick"  />
+
+            <Button android:id="@+id/users" android:drawableTop="@drawable/dashboard_users" style="@style/DashboardButton"  android:text="Users"  android:onClick="onClick"/>
+        </TableRow>
+
+        <TableRow android:layout_marginTop="5dp" android:layout_weight="1">
+            <Button  android:id="@+id/orders" android:drawableTop="@drawable/kuser" style="@style/DashboardButton" android:text="Info" android:onClick="onClick"/>
+            <Button android:id="@+id/nomenclators" android:drawableTop="@drawable/dashboard_nomenclators" style="@style/DashboardButton"   android:text="Nomenclators" android:onClick="onClick"/>
+        </TableRow>
+
+    </TableLayout>
+</RelativeLayout>
+
+
+

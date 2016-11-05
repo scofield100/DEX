@@ -1,0 +1,10 @@
+<component name="libraryTable">
+  <library name="enterlib-release-unspecified">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/foodDelivery/build/intermediates/exploded-aar/delivery2go_studio/enterlib-release/unspecified/jars/classes.jar!/" />
+      <root url="file://$PROJECT_DIR$/foodDelivery/build/intermediates/exploded-aar/delivery2go_studio/enterlib-release/unspecified/res" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
